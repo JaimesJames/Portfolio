@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+ @font-face {
+  font-family: makota;
+  src: url(./font/Makota.ttf);
+}
+@font-face {
+  font-family: thabit;
+  src: url(./font/Thabit.ttf);
+}
+
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -25,21 +36,25 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
-*{
+
+* {
   box-sizing: border-box;
   margin: 0;
 }
 
-body{
-  background: rgb(0, 0, 0);
+body {
+
+  overflow-x: hidden;
+  
 }
 
-.container{
+.container {
   width: 100%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
+  background: rgb(255, 255, 255);
 }

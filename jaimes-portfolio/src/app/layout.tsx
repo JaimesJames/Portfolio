@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='container bg-white'>
+        <div className='bg-white font-thab text-c1 overscroll-x-auto'>
           {children}
         </div>
       </body>
