@@ -22,10 +22,10 @@ const ProjectandActivite = () => {
                             <rect width="25" height="25" fill="#2B2B2B" />
                         </svg>
                     </div>
-                    
-
                 </div>
-                <div className=" p-4 h-screen w-full flex flex-col content-center justify-center relative z-10"></div>
+                <div className=" p-4 h-screen w-full flex flex-col content-center justify-center relative z-10">
+                    <div></div>
+                </div>
             </div>
         </>
     )
