@@ -1,9 +1,9 @@
 
 
-const Profile = () => {
+const About = () => {
     return (
         <>
-            <div className="mt-56 h-auto">
+            <div className="mt-56 h-auto observer" data-title="About">
                 <div className="mt-10">
                     <h1 className="text-6xl text-center">About</h1>
                 </div>
@@ -93,4 +93,4 @@ const Profile = () => {
     )
 }
 
-export default Profile
+export default About

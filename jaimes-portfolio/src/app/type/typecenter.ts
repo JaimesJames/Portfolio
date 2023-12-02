@@ -1,3 +1,3 @@
-export type Navprop = {items:Item[]}
+export type Navprop = {items:Item[],y:number}
 
-export type Item = {id:number, spot:string, y:number}
+export type Item = {id:number, spot:string, fill:string}

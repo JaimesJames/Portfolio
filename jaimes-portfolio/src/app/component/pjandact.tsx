@@ -3,8 +3,8 @@ import { deflate } from "zlib"
 const ProjectandActivite = () => {
     return (
         <>
-            <div className="w-full text-center">
-                <div className=" p-4 h-screen w-full flex flex-col content-center justify-center relative z-10">
+            <div className="w-full text-center observer" data-title="Projects & Activities">
+                <div className=" p-4 h-screen w-full flex flex-col content-center justify-center relative z-10 ">
                     <div>
                         <h1 className="text-5xl">Projects & Activities </h1>
                     </div>

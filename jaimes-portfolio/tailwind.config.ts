@@ -28,7 +28,10 @@ const config: Config = {
       },
       colors:{
         'ci-1':'#2b2b2b'
-      }
+      },
+      rotate:{
+        '225': '225deg'
+      },
     }
   },
   plugins: [],
