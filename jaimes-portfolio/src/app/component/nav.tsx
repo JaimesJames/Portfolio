@@ -7,19 +7,20 @@ import { useEffect, useState } from "react"
 
 const Nav = (props:Navprop) => {
 
-    const [navState, setNavState] = useState(false)
+    const [navState, setNavState] = useState('show')
     useEffect(()=>{
-        if (props.y > 500){
-            setNavState(true)
+        if (props.y > 500 && navState != 'lock'){
+            setNavState('hide')
         }
-        else{
-            setNavState(false)
+        else if (navState != 'lock'){
+            setNavState('show')
         }
+        console.log(navState)
     },[props.y])
 
     return (
         <>
-            <div className={`fixed w-15 h-15 bg-ci-1 bottom-14 right-28 z-50 ${navState ? 'rotate-0':'rotate-225'} duration-700 ease-in-out`} onClick={() => navState ? setNavState(false):setNavState(true)}>
+            <div className={`fixed w-15 h-15 bg-ci-1 bottom-14 right-28 z-50 ${navState === 'hide' ? 'rotate-0':'rotate-225'} duration-700 ease-in-out`} onClick={() => navState == 'hide' ? setNavState('lock'):setNavState('hide')}>
                 <div className="p-5">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.226807" y="0.226807" width="10" height="10" rx="5" fill="white" />
@@ -29,7 +30,7 @@ const Nav = (props:Navprop) => {
                     </svg>
                 </div>
             </div>
-            <div className={`fixed   ${navState ? 'opacity-0 bottom-0 scale-0 right-0':'opacity-1 bottom-40 scale-1 right-20'} duration-500`} >
+            <div className={`fixed   ${navState === 'hide' ? 'opacity-0 bottom-0 scale-0 right-0':'opacity-1 bottom-40 scale-1 right-20'} duration-500`} >
                {props.items.map((e:Item)=>{
                 return <Title {...e} key={e.id}/>
                })}

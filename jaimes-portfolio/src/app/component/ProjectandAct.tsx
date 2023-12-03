@@ -1,4 +1,7 @@
-import { deflate } from "zlib"
+import Coral from "./pjnanddact-component/coralCojaiKiosk"
+import Domfinding from "./pjnanddact-component/KMITLwithDomitaryFinding"
+import Itcamp from "./pjnanddact-component/ITCamp19"
+import Unite from "./pjnanddact-component/UniteV"
 
 const ProjectandActivite = () => {
     return (
@@ -23,9 +26,10 @@ const ProjectandActivite = () => {
                         </svg>
                     </div>
                 </div>
-                <div className=" p-4 h-screen w-full flex flex-col content-center justify-center relative z-10">
-                    <div></div>
-                </div>
+                <Coral/>
+                <Domfinding/>
+                <Itcamp/>
+                <Unite/>
             </div>
         </>
     )

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import Cover from './component/cover'
 import About from './component/about'
-import ProjectandActivite from './component/pjandact'
+import ProjectandActivite from './component/ProjectandAct'
 import Nav from './component/nav'
 
 import type { Item } from './type/typecenter'
