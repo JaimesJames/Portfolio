@@ -4,7 +4,7 @@ const Title = (props:Item) => {
     return (
         
         <>
-            <div className=" p-5 flex h-auto w-auto content-center justify-end gap-5 " data-title={props.spot}>
+            <div className="mr-4 flex h-auto w-auto content-center justify-end gap-5 " data-title={props.spot}>
                 <h2>{props.spot}</h2>
                 <div className="p-1">
                     <svg width="21" height="21" viewBox="0 0 21 21" fill={props.fill} xmlns="http://www.w3.org/2000/svg">

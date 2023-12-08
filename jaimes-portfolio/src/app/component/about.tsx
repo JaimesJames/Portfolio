@@ -7,19 +7,19 @@ const About = () => {
                 <div className="mt-10">
                     <h1 className="text-6xl text-center">About</h1>
                 </div>
-                <div className="p-4 h-auto w-full flex content-center justify-center relative">
-                    <div className="w-10/12">
+                <div className="p-4 h-auto w-full flex md:flex-row flex-col text-center md:text-start content-center justify-center relative">
+                    <div className="md:w-10/12 m-auto">
                         <svg width="319" height="588" viewBox="0 0 319 588" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="319" height="588" fill="#2B2B2B" />
                         </svg>
 
                     </div>
-                    <div className="w-10/12 pt-10">
+                    <div className="md:w-10/12 pt-10">
                         <p className="text-xl">I’m Supanat Kaewkulsri, a third-year student at KMITL, Major of IT with Multimedia. I'm actually interested in both art and computer technology. In my three years of study I always learn and participate in activities to improve my skills. I hope you like my project, and have the opportunity to work together.</p>
                         <svg className="absolute right-0 top-56 " width="9" height="151" viewBox="0 0 9 151" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="5" height="151" fill="#2B2B2B"/>
-                </svg>
-                        <div className=" w-auto h-auto flex flex-row-reverse gap-4 mt-56">
+                            <rect width="5" height="151" fill="#2B2B2B" />
+                        </svg>
+                        <div className=" w-auto h-auto flex md:flex-row-reverse justify-center md:justify-start gap-4 mt-56">
                             <div className="w-14 h-14 bg-ci-1 rounded-full flex justify-center content-center p-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="25" width="23" viewBox="0 0 448 512"><path fill="#ffffff" d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" /></svg>
                             </div>
@@ -30,13 +30,13 @@ const About = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" height="35" width="33" viewBox="0 0 448 512"><path fill="#ffffff" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" /></svg>
                             </div>
                         </div>
-                        <div className=" w-auto h-auto flex flex-col text-right gap-1 mt-10 text-lg">
+                        <div className=" w-auto h-auto flex flex-col md:text-right  gap-1 mt-10 text-lg">
                             <p>s.keawkulsri1212@gmail.com</p>
                             <p>+66 824590763</p>
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex flex-row justify-around bg-gray-100 p-20">
+                <div className="w-full flex md:flex-row flex-col text-center md:text-start gap-10 md:justify-around bg-gray-100 p-20">
                     <div className="flex flex-col gap-4">
                         <h1 className="text-2xl font-bold">Abilities</h1>
                         <p className="text-xl">Fast and easy learner<br />

@@ -38,7 +38,13 @@ const config: Config = {
       rotate:{
         '225': '225deg'
       },
-    }
+      screen: {
+        'tablet':'640px',
+        'mac':'1920px',
+        'desktop':'1280px'
+      }
+    },
+    
   },
   plugins: [],
 }
