@@ -7,17 +7,17 @@ import { useEffect, useState } from "react"
 
 const Nav = (props: Navprop) => {
 
-    const handleScroll = () => {
-        var timer = null;
-        window.addEventListener('scroll', function () {
-            if (timer !== null) {
-                clearTimeout(timer);
-            }
-            timer = setTimeout(function () {
-                // do something
-            }, 150);
-        }, false);
-    }
+    // const handleScroll = () => {
+    //     var timer = null;
+    //     window.addEventListener('scroll', function () {
+    //         if (timer !== null) {
+    //             clearTimeout(timer);
+    //         }
+    //         timer = setTimeout(function () {
+    //             // do something
+    //         }, 150);
+    //     }, false);
+    // }
 
     const [navState, setNavState] = useState('show')
     useEffect(() => {
@@ -31,16 +31,16 @@ const Nav = (props: Navprop) => {
 
 
     }, [props.y])
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        }
-    }, []);
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     }
+    // }, []);
 
     return (
         <>
-            <div className={`md:flex hidden fixed bottom-14 right-28 z-50 flex-col items-end gap-10 ${}`}>
+            <div className={`md:flex hidden fixed bottom-14 right-28 z-50 flex-col items-end gap-10 `}>
                 <div className={`flex flex-col gap-5 ${navState === 'hide' ? 'opacity-0  scale-0 ' : 'opacity-1  scale-1 '} duration-500`} >
                     {props.items.map((e: Item) => {
                         return <Title {...e} key={e.id} />
