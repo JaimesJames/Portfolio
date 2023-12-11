@@ -130,14 +130,6 @@ const CoverScene: React.FC = () => {
             camera.lookAt(scene.position);
 
 
-            // for ( let i = 0, il = spheres.length; i < il; i ++ ) {
-
-            // 	const sphere = spheres[ i ];
-
-            // 	sphere.position.x = 5 * Math.cos( timer + i );
-            // 	sphere.position.y = 5 * Math.sin( timer + i * 1.1 );
-
-            // }
 
             renderer.render(scene, camera);
 
@@ -155,9 +147,31 @@ const CoverScene: React.FC = () => {
         // controls.minPolarAngle = -40
         controls.enableZoom = false
 
+        const spheres = new THREE.Group()
+        spheres.add(sphere1) 
+        spheres.add(sphere2) 
+        spheres.add(sphere3) 
+        scene.add(spheres)
         const animate = () => {
 
             requestAnimationFrame(animate);
+
+            var delayInMilliseconds = 1000; //1 second
+
+            
+            spheres.rotation.z -= 0.0001
+            
+
+           
+            
+            // setTimeout(()=> {
+            //     sph *= -1
+               
+            // }, delayInMilliseconds);
+
+            
+
+            sphere3.position.set(-20, 50, 1)
 
 
 
@@ -171,7 +185,7 @@ const CoverScene: React.FC = () => {
             render()
 
         }
-        console.log('HI')
+        
 
         const handleResize = () => {
             const width = window.innerWidth;
@@ -196,7 +210,7 @@ const CoverScene: React.FC = () => {
 
     return (
         <>
-            <div className=" absolute z-50 bottom-0 left-0 w-full h-screen bg-gradient-to-t from-white to-transparent"/>
+            <div className=" absolute z-50 bottom-0 left-0 w-full h-screen bg-gradient-to-t from-white to-transparent" />
             <div className='absolute top-0 left-0 z-0' ref={containerRef} />
         </>
 

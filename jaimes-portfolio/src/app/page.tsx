@@ -34,7 +34,7 @@ export default function Home() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log(entry.target)
+          // console.log(entry.target)
           const getTitle = entry.target.getAttribute('data-title') || '';
           setTitle(getTitle);
         }
@@ -57,7 +57,7 @@ export default function Home() {
     }
 
   }, []);
-  console.log(title)
+  // console.log(title)
   const inititem: Item[] = [
     { id: 1, spot: 'About', fill: `${title === 'About' ? '#2b2b2b' : 'none'}` },
     { id: 2, spot: 'Projects & Activities', fill: `${title === 'Projects & Activities' ? '#2b2b2b' : 'none'}` },

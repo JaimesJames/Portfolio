@@ -43,9 +43,9 @@ const Cover = () => {
                 <svg className="absolute right-sqr-1 bottom-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25" height="25" fill="#2B2B2B" />
                 </svg>
-                {/* <svg className="absolute left-sqr-1 top-sqr-2 " width="9" height="151" viewBox="0 0 9 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="absolute left-sqr-1 top-sqr-2 " width="9" height="151" viewBox="0 0 9 151" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="5" height="151" fill="#2B2B2B"/>
-                </svg> */}
+                </svg>
 
             </div>
             

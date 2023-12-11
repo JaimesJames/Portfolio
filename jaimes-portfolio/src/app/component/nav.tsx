@@ -27,7 +27,7 @@ const Nav = (props: Navprop) => {
         else if (navState != 'lock') {
             setNavState('show')
         }
-        console.log(navState)
+        // console.log(navState)
 
 
     }, [props.y])
