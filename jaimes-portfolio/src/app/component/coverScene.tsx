@@ -53,6 +53,12 @@ const CoverScene: React.FC = () => {
         const geometry2 = new THREE.SphereGeometry(20, 50, 50);
         const geometry3 = new THREE.SphereGeometry(5, 50, 50);
 
+        const geometry4 = new THREE.BoxGeometry(5,5,5)
+        
+        const geometry5 = new THREE.TorusGeometry( 5, 1.5, 16, 100 ); 
+        
+        const geometry6 = new THREE.TetrahedronGeometry(5,0)
+
         const sphere1 = new THREE.Mesh(geometry1, material)
         sphere1.position.set(60, 20, 0)
 
@@ -62,11 +68,26 @@ const CoverScene: React.FC = () => {
         const sphere3 = new THREE.Mesh(geometry3, material)
         sphere3.position.set(-20, 50, 1)
 
+        const cube1 = new THREE.Mesh(geometry4,material)
+        cube1.position.set(-80, 40, 0)
+        
+        const torus1 = new THREE.Mesh(geometry5,material)
+        torus1.position.set(-80, 40, 0)
+        
+        const tri1 = new THREE.Mesh(geometry6,material)
+        tri1.position.set(60, -40, 0)
+
+        
+
+
 
         //
         scene.add(sphere1)
         scene.add(sphere2)
         scene.add(sphere3)
+        scene.add(torus1)
+        scene.add(tri1)
+
 
         let mouseX = 0;
         let mouseY = 0;
@@ -160,22 +181,16 @@ const CoverScene: React.FC = () => {
 
             
             spheres.rotation.z -= 0.0001
-            
 
+            torus1.rotation.x += 0.005
            
-            
-            // setTimeout(()=> {
-            //     sph *= -1
-               
-            // }, delayInMilliseconds);
+            torus1.rotation.y += 0.005
 
-            
+            tri1.rotation.z += 0.005
+           
+            tri1.rotation.y += 0.005
 
             sphere3.position.set(-20, 50, 1)
-
-
-
-            // mixer.update(  );
 
             controls.update();
 
