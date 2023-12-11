@@ -1,15 +1,21 @@
+// import CoverScene from "./coverScene"
+
 const Cover = () => {
+
+    
+
     return (
 
         <div className=" p-4 h-screen w-full flex flex-col content-center justify-center relative z-10">
-            <div className="z-20 flex flex-col justify-between gap-y-9">
-                <h3 className="text-center text-3xl">Hi, This is</h3>
-                <h1 className="text-center md:text-8xl text-6xl font-thab"><span className="font-mako">Supanat</span>'s</h1>
-                <h3 className="text-center text-3xl">Portfolio</h3>
+            <div className=" z-20 flex flex-col justify-between gap-y-9">
+                <h3 className="text-center text-3xl text-white">Hi, This is</h3>
+                <h1 className="text-center md:text-8xl text-6xl font-thab text-white"><span className="font-mako">Supanat</span>'s</h1>
+                <h3 className="text-center text-3xl text-white">Portfolio</h3>
             </div>
 
             <div>
-                <div className="lg:block hidden">
+                
+                {/* <div className="lg:block hidden">
                     <svg className="absolute right-prop-1-t top-prop-1-r" width="1600" height="1605" viewBox="0 0 1520 1525" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="1155.06" cy="571.06" r="22.1709" transform="rotate(45.5266 1155.06 571.06)" stroke="#2B2B2B" />
                         <circle cx="1187.08" cy="1237.08" r="10.167" transform="rotate(45.5266 1187.08 1237.08)" fill="#2B2B2B" stroke="#2B2B2B" />
@@ -23,19 +29,19 @@ const Cover = () => {
                         <circle cx="153.21" cy="153.21" r="107.84" transform="rotate(45.5266 153.21 153.21)" stroke="#2B2B2B" />
                         <circle cx="261.904" cy="162.035" r="10.167" transform="rotate(45.5266 261.904 162.035)" fill="#2B2B2B" stroke="#2B2B2B" />
                     </svg>
-                </div>
-
+                </div> */}
+                
                 <svg className="absolute left-sqr-1 top-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="25" height="25" fill="#2B2B2B" />
+                    <rect width="25" height="25" fill="#fff" />
                 </svg>
                 <svg className="absolute left-sqr-1 bottom-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="25" height="25" fill="#2B2B2B" />
+                    <rect width="25" height="25" fill="#fff" />
                 </svg>
                 <svg className="absolute right-sqr-1 top-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="25" height="25" fill="#2B2B2B" />
+                    <rect width="25" height="25" fill="#fff" />
                 </svg>
                 <svg className="absolute right-sqr-1 bottom-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="25" height="25" fill="#2B2B2B" />
+                    <rect width="25" height="25" fill="#fff" />
                 </svg>
                 {/* <svg className="absolute left-sqr-1 top-sqr-2 " width="9" height="151" viewBox="0 0 9 151" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="5" height="151" fill="#2B2B2B"/>

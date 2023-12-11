@@ -5,6 +5,7 @@ import Cover from './component/cover'
 import About from './component/about'
 import ProjectandActivite from './component/ProjectandAct'
 import Nav from './component/nav'
+import CoverScene from "./component/coverScene";
 
 import type { Item } from './type/typecenter'
 
@@ -64,7 +65,7 @@ console.log(title)
   ];
   return (
 
-    <>
+    <><CoverScene/>
       <div className='container'>
         <Cover />
         <About />

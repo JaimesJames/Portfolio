@@ -12,11 +12,12 @@ const config: Config = {
       'mako':['Makota'],
       'thab' :['Thabit'],
     },
-    textColor:{
+    
+    extend: {textColor:
+      {
       'ci-1':'#2B2B2B'
 
     },
-    extend: {
       inset:{
         'prop-1-t':'-15rem',
         'prop-1-r':'-20rem',
