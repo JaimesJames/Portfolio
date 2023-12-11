@@ -41,7 +41,7 @@ const Nav = (props: Navprop) => {
     return (
         <>
             <div className={`md:flex hidden fixed bottom-14 right-28 z-50 flex-col items-end gap-10 `}>
-                <div className={`flex flex-col gap-5 ${navState === 'hide' ? 'opacity-0  scale-0 ' : 'opacity-1  scale-1 '} duration-500`} >
+                <div className={`flex flex-col gap-5 ${navState === 'hide' ? 'opacity-0  scale-0 translate-y-36 translate-x-28' : 'opacity-1  scale-1 '} duration-500`} >
                     {props.items.map((e: Item) => {
                         return <Title {...e} key={e.id} />
                     })}

@@ -33,42 +33,45 @@ export default function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting){
+        if (entry.isIntersecting) {
           console.log(entry.target)
           const getTitle = entry.target.getAttribute('data-title') || '';
           setTitle(getTitle);
         }
       });
-    },{
-    root: null,
-    rootMargin:'0px',
-    threshold:0.5
-  });
-  const targets = document.querySelectorAll('.observer');
-  targets.forEach((target)=>{
-    observer.observe(target);
-    
-  })
-  
-  return () => {
+    }, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    });
+    const targets = document.querySelectorAll('.observer');
     targets.forEach((target) => {
-      observer.unobserve(target);
-    })
-  }
+      observer.observe(target);
 
-  },[]);
-console.log(title)
+    })
+
+    return () => {
+      targets.forEach((target) => {
+        observer.unobserve(target);
+      })
+    }
+
+  }, []);
+  console.log(title)
   const inititem: Item[] = [
-    { id: 1, spot: 'About', fill:`${title === 'About' ? '#2b2b2b':'none'}` },
-    { id: 2, spot: 'Projects & Activities', fill:`${title === 'Projects & Activities' ? '#2b2b2b':'none'}` },
-    { id: 3, spot: 'Artwork', fill:`${title === 'Artwork' ? '#2b2b2b':'none'}` },
+    { id: 1, spot: 'About', fill: `${title === 'About' ? '#2b2b2b' : 'none'}` },
+    { id: 2, spot: 'Projects & Activities', fill: `${title === 'Projects & Activities' ? '#2b2b2b' : 'none'}` },
+    { id: 3, spot: 'Artwork', fill: `${title === 'Artwork' ? '#2b2b2b' : 'none'}` },
   ];
+
   return (
 
-    <><CoverScene/>
+    <><CoverScene />
       <div className='container'>
         <Cover />
+        <div className="observer" data-title="About" />
         <About />
+        <div className="observer" data-title="Projects & Activities" />
         <ProjectandActivite />
       </div>
       <Nav items={inititem} y={scrollPosition} />

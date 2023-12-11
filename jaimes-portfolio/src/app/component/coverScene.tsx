@@ -17,10 +17,10 @@ const CoverScene: React.FC = () => {
         let aspect = window.innerWidth / window.innerHeight;
         const frustumSize = 100;
         const camera = new THREE.PerspectiveCamera(75, (window.innerWidth / window.innerHeight), 0.1, 1000)
-        
+
         // const camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, .1, 1000  );
         const renderer = new THREE.WebGL1Renderer()
-        const cameraOrthoHelper = new THREE.CameraHelper( camera );
+        const cameraOrthoHelper = new THREE.CameraHelper(camera);
         // scene.add( cameraOrthoHelper );
 
         const container = containerRef.current;
@@ -33,7 +33,7 @@ const CoverScene: React.FC = () => {
 
         camera.position.z = 100;
         // camera.rotation.y = .5;
-        
+
 
         //
         const material = new THREE.MeshPhysicalMaterial(
@@ -60,7 +60,7 @@ const CoverScene: React.FC = () => {
         sphere2.position.set(-60, -30, 5)
 
         const sphere3 = new THREE.Mesh(geometry3, material)
-        sphere3.position.set(-20,50, 1)
+        sphere3.position.set(-20, 50, 1)
 
 
         //
@@ -79,7 +79,7 @@ const CoverScene: React.FC = () => {
             mouseX = (event.clientX - windowHalfX) / 100;
             mouseY = (event.clientY - windowHalfY) / 100;
 
-            console.log(`x ${mouseX} y ${mouseY}`)
+            // console.log(`x ${mouseX} y ${mouseY}`)
             if (mouseX < -5) {
                 mouseX = -5
             }
@@ -145,21 +145,21 @@ const CoverScene: React.FC = () => {
         render()
 
         const controls = new OrbitControls(camera, renderer.domElement);
-            controls.target.set(0, 0.5, 0);
-            controls.update();
-            controls.enablePan = false;
-            controls.enableDamping = true;
-            // controls.maxAzimuthAngle = 40
-            // controls.maxPolarAngle = 40
-            // controls.minAzimuthAngle = -40
-            // controls.minPolarAngle = -40
-            controls.enableZoom = false
+        controls.target.set(0, 0.5, 0);
+        controls.update();
+        controls.enablePan = false;
+        controls.enableDamping = true;
+        // controls.maxAzimuthAngle = 40
+        // controls.maxPolarAngle = 40
+        // controls.minAzimuthAngle = -40
+        // controls.minPolarAngle = -40
+        controls.enableZoom = false
 
         const animate = () => {
 
             requestAnimationFrame(animate);
 
-            
+
 
             // mixer.update(  );
 
@@ -186,7 +186,7 @@ const CoverScene: React.FC = () => {
         window.addEventListener('resize', handleResize);
         document.addEventListener('mousemove', onDocumentMouseMove);
         animate()
-        
+
         return () => {
             window.removeEventListener('resize', handleResize);
             document.removeEventListener('mousemove', onDocumentMouseMove);
@@ -194,7 +194,13 @@ const CoverScene: React.FC = () => {
         };
     }, [])
 
-    return <div className='absolute top-0 left-0 z-0' ref={containerRef} />
+    return (
+        <>
+            <div className=" absolute z-50 bottom-0 left-0 w-full h-screen bg-gradient-to-t from-white to-transparent"/>
+            <div className='absolute top-0 left-0 z-0' ref={containerRef} />
+        </>
+
+    )
 }
 
 export default CoverScene
