@@ -6,6 +6,8 @@ import About from './component/about'
 import ProjectandActivite from './component/ProjectandAct'
 import Nav from './component/nav'
 import CoverScene from "./component/coverScene";
+import Artwork from "./component/Artwork";
+import Footer from "./component/footer";
 
 import type { Item, Abouts } from './type/typecenter'
 
@@ -59,30 +61,63 @@ export default function Home() {
   }, []);
   // console.log(title)
   const inititem: Item[] = [
-    { id: 1, spot: 'About', fill: `${title === 'About' ? '#2b2b2b' : 'none'}` },
-    { id: 2, spot: 'Projects & Activities', fill: `${title === 'Projects & Activities' ? '#2b2b2b' : 'none'}` },
-    { id: 3, spot: 'Artwork', fill: `${title === 'Artwork' ? '#2b2b2b' : 'none'}` },
+    { id: 1, spot: 'About Me', fill: `${title === 'About' ? 'white' : 'none'}` },
+    { id: 2, spot: 'Projects & Activities', fill: `${title === 'Projects & Activities' ? 'white' : 'none'}` },
+    { id: 3, spot: 'Artwork', fill: `${title === 'Artwork' ? 'white' : 'none'}` },
   ];
 
   const about: Abouts[] = [
     {
       title: 'Abilities',
-      detail: ['Fast and easy learner', 'Creativity', 'Adaptabily', 'High Motivation', 'flexible and under pressure'],
+      detail: [
+        {id:1, list:'Fast and easy learner'}, 
+        {id:2, list:'Creativity'}, 
+        {id:3, list:'Adaptabily'}, 
+        {id:4, list:'High Motivation'}, 
+        {id:5, list:'flexible and under pressure'}
+      ],
       color: 'white'
     },
     {
       title: 'Programs',
-      detail: ['Visual Studio Code','AutoDesk Maya','Unreal Engine', 'Figma', 'Adobe', 'QT', 'Blender', 'InteliJ IDEA'], 
+      detail: [
+        {id:1, list:'Visual Studio Code'},
+        {id:2, list:'AutoDesk Maya'},
+        {id:3, list:'Unreal Engine'}, 
+        {id:4, list:'Figma'}, 
+        {id:5, list:'Adobe'}, 
+        {id:6, list:'QT'}, 
+        {id:7, list:'Blender'}, 
+        {id:8, list:'InteliJ IDEA'}
+      ], 
       color: 'white'
     },
     {
       title: 'Languages & Skills',
-      detail: ['Typescript', 'Javascript', 'Python', 'UI and Graphic Designing', 'Object Oriented Programming', 'SQL & NoSQL', 'JAVA', 'PyQT'], 
+      detail: [
+        {id:1, list:'Typescript'}, 
+        {id:2, list:'Javascript'}, 
+        {id:3, list:'Python'}, 
+        {id:4, list:'UI and Graphic Designing'}, 
+        {id:5, list: 'Object Oriented Programming'}, 
+        {id:6, list:'SQL & NoSQL'}, 
+        {id:7, list: 'JAVA'}, 
+        {id:8, list: 'PyQT'}
+      ], 
       color: 'white'
     },
     {
       title: 'Frameworks & Tools',
-      detail: ['React.js', 'Tailwind CSS', 'Next.js', 'Three.js', 'Express.js', 'Svelte.js', 'Vue.js'], 
+      detail: [
+        {id:1, list:'React.js'}, 
+        {id:2, list:'Tailwind CSS'}, 
+        {id:3, list:'Next.js'}, 
+        {id:4, list:'Three.js'}, 
+        {id:5, list:'Express.js'}, 
+        {id:6, list:'Svelte.js'}, 
+        {id:7, list:'Vue.js'},
+        {id:8, list:'Gsap'}
+      ], 
       color: 'white'
     }
   ]
@@ -96,7 +131,11 @@ export default function Home() {
         <About about={about}/>
         <div className="observer" data-title="Projects & Activities" />
         <ProjectandActivite />
+        <div className="observer" data-title="Projects & Activities" />
+        <div className="observer" data-title="Artwork" />
+        <Artwork/>
       </div>
+      <Footer/>
       <Nav items={inititem} y={scrollPosition} />
     </>
   )

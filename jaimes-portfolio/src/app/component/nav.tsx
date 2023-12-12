@@ -49,13 +49,13 @@ const Nav = (props: Navprop) => {
                         return <Title {...e} key={e.id} />
                     })}
                 </div>
-                <div className={`flex items-center justify-center w-16 h-16 bg-ci-1  ${navState === 'hide' ? 'rotate-0' : 'rotate-225'} duration-700 ease-in-out`} onClick={() => navState == 'hide' ? setNavState('lock') : setNavState('hide')}>
+                <div className={`flex items-center justify-center w-16 h-16 bg-white  ${navState === 'hide' ? 'rotate-0' : 'rotate-225'} duration-700 ease-in-out`} onClick={() => navState == 'hide' ? setNavState('lock') : setNavState('hide')}>
 
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.226807" y="0.226807" width="10" height="10" rx="5" fill="white" />
-                        <rect x="17.0562" y="0.226807" width="10" height="10" rx="5" fill="white" />
-                        <rect x="17.0562" y="17.0561" width="10" height="10" rx="5" fill="white" />
-                        <rect x="0.226807" y="17.0561" width="10" height="10" rx="5" fill="white" />
+                        <rect x="0.226807" y="0.226807" width="10" height="10" rx="5" fill="#2b2b2b" />
+                        <rect x="17.0562" y="0.226807" width="10" height="10" rx="5" fill="#2b2b2b" />
+                        <rect x="17.0562" y="17.0561" width="10" height="10" rx="5" fill="#2b2b2b" />
+                        <rect x="0.226807" y="17.0561" width="10" height="10" rx="5" fill="#2b2b2b" />
                     </svg>
 
                 </div>

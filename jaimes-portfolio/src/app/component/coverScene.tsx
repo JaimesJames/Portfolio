@@ -26,7 +26,7 @@ const CoverScene: React.FC = () => {
         const container = containerRef.current;
 
         renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setClearColor(0x000000, 1)
+        renderer.setClearColor(0x121212, 1)
 
 
         container?.appendChild(renderer.domElement);
@@ -42,7 +42,7 @@ const CoverScene: React.FC = () => {
                 clearcoatRoughness: 0.1,
                 metalness: 0.9,
                 roughness: 0.0,
-                color: 0xffffff,
+                color: 0xffa952,
                 ior: 0,
                 reflectivity: 1,
                 iridescence: 1,

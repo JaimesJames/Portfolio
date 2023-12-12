@@ -4,4 +4,6 @@ export type Item = {id:number, spot:string, fill:string}
 
 export type AboutData = {about:Abouts[]}
 
-export type Abouts = {title:string, detail:string[] , color:string}
+export type Abouts = {title:string, detail:Detail[] , color:string}
+
+export type Detail = {id:number, list:string}

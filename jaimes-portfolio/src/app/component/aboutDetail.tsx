@@ -1,16 +1,17 @@
-import { Abouts } from "../type/typecenter"
+import { Abouts, Detail } from "../type/typecenter"
 
-const AboutDeteil =(props:Abouts)=>{
+const AboutDeteil = (props: Abouts) => {
     let count = 0
-    return(
+    return (
         <>
-        <div className="flex flex-wrap gap-2">
-              {props.detail.map(e=>{
-            return <div className="whitespace-nowrap px-5 py-1 border rounded-full border-white text-center">{e}</div>
-        })}
-        </div>
-      
-            
+            <div className="flex flex-wrap gap-2">
+                {props.detail.map(e=>{
+                     return <div className="whitespace-nowrap px-5 py-1 border rounded-full border-white text-center" key={e.id}>{e.list}</div>
+                })}
+           
+            </div>
+
+
         </>
     )
 

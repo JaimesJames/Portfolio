@@ -5,7 +5,7 @@ import mock from '@/app/img/mock domitory.png'
 const Domfinding = () => {
     return (
         <>
-            <div className=" p-4 md:h-screen w-full flex flex-col content-center justify-center relative z-10">
+            <div className=" p-4 md:h-500 w-full flex flex-col content-center justify-center relative z-10 bg-white rounded-2xl">
                 <div className="">
                     <svg className="absolute left-sqr-1 top-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="25" height="25" fill="#2B2B2B" />
@@ -22,16 +22,16 @@ const Domfinding = () => {
                 </div>
                 <div className="md:p-20 p-5  md:flex-row flex flex-col justify-between content-center text-left">
                     <div>
-                        <Image src={mock} width={1500} height={100} alt='coral' />
+                        <Image src={mock} width={800} height={100} alt='coral' />
                     </div>
-                    <div className="flex flex-col gap-10 content-center justify-center">
+                    <div className="flex flex-col gap-5 content-center justify-center p-14">
                         <div>
                             <h1 className="text-3xl font-bold text-center md:text-start">KMITL with dormitory finding</h1>
                             <h4 className="text-2xl text-center md:text-start">UX & UI Design Project</h4>
                         </div>
-                        <p className="text-xl ">a project from the Human Interface Design course, We were design the application to relate with actually user requirements.</p>
-                        <p className="text-xl ">Our project suit to everyone who need to find dormitory.</p>
-                        <p className="text-xl ">The IT with dormitory finding is base on IPhone 8 Viewport.</p>
+                        <p className="text-lg ">a project from the Human Interface Design course, We were design the application to relate with actually user requirements.</p>
+                        <p className="text-lg ">Our project suit to everyone who need to find dormitory.</p>
+                        <p className="text-lg ">The IT with dormitory finding is base on IPhone 8 Viewport.</p>
                         <div className=" w-auto h-auto flex gap-4 md:justify-start justify-center">
                             <a href="https://www.figma.com/proto/BnnjNeOp3elqpEOSDqyVf0/HID-Design?page-id=0%3A1&node-id=57-7118&starting-point-node-id=57%3A7118&mode=design&t=IembKBfvwI5vCHXq-1">
                                 <div className="w-14 h-14 bg-674188 rounded-full flex justify-center content-center p-3">

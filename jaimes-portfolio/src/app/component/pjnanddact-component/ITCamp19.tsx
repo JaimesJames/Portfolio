@@ -5,7 +5,7 @@ import mock from '@/app/img/mock-ITCamp.png'
 const Itcamp = () => {
     return (
         <>
-            <div className=" p-4 md:h-screen w-full flex flex-col content-center justify-center relative z-10">
+            <div className=" p-4 md:h-500 w-full flex flex-col content-center justify-center relative z-10 bg-121212 rounded-2xl">
                 <div className="">
                     <svg className="absolute left-sqr-1 top-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="25" height="25" fill="#2B2B2B" />
@@ -24,7 +24,7 @@ const Itcamp = () => {
                     <div>
                         <Image src={mock} width={2500} height={100} alt='coral' />
                     </div>
-                    <div className="flex flex-col gap-10 content-center justify-center">
+                    <div className="flex flex-col gap-10 content-center justify-center text-white p-2">
                         <div>
                             <h1 className="text-3xl font-bold text-center md:text-start">ITCamp 19 -
                                 The Story of Dream Forest</h1>

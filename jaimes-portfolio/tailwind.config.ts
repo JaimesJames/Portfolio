@@ -34,6 +34,7 @@ const config: Config = {
         '674188': '#674188',
         '57AE00': '#57AE00',
         'FF0087': '#FF0087',
+        '121212':'#121212',
         'A7271A': '#A7271A'
       },
       rotate:{
@@ -43,6 +44,9 @@ const config: Config = {
         'tablet':'640px',
         'mac':'1920px',
         'desktop':'1280px'
+      },
+      height:{
+        '500':'500px'
       }
     },
     
