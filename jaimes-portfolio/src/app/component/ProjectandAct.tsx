@@ -4,9 +4,9 @@ import Itcamp from "./pjnanddact-component/ITCamp19"
 import Unite from "./pjnanddact-component/UniteV"
 
 const ProjectandActivite = () => {
-    return (
+    return ( 
         <>
-            <div className="w-full text-center observer" data-title="Projects & Activities">
+            <div className="w-full text-center observer bg-white" data-title="Projects & Activities">
                 <div className=" p-4 h-screen w-full flex flex-col content-center justify-center relative z-10 ">
                     <div>
                         <h1 className="text-5xl">Projects & Activities </h1>

@@ -7,7 +7,7 @@ import ProjectandActivite from './component/ProjectandAct'
 import Nav from './component/nav'
 import CoverScene from "./component/coverScene";
 
-import type { Item } from './type/typecenter'
+import type { Item, Abouts } from './type/typecenter'
 
 
 export default function Home() {
@@ -64,13 +64,36 @@ export default function Home() {
     { id: 3, spot: 'Artwork', fill: `${title === 'Artwork' ? '#2b2b2b' : 'none'}` },
   ];
 
+  const about: Abouts[] = [
+    {
+      title: 'Abilities',
+      detail: ['Fast and easy learner', 'Creativity', 'Adaptabily', 'High Motivation', 'flexible and under pressure'],
+      color: 'white'
+    },
+    {
+      title: 'Programs',
+      detail: ['Visual Studio Code','AutoDesk Maya','Unreal Engine', 'Figma', 'Adobe', 'QT', 'Blender', 'InteliJ IDEA'], 
+      color: 'white'
+    },
+    {
+      title: 'Languages & Skills',
+      detail: ['Typescript', 'Javascript', 'Python', 'UI and Graphic Designing', 'Object Oriented Programming', 'SQL & NoSQL', 'JAVA', 'PyQT'], 
+      color: 'white'
+    },
+    {
+      title: 'Frameworks & Tools',
+      detail: ['React.js', 'Tailwind CSS', 'Next.js', 'Three.js', 'Express.js', 'Svelte.js', 'Vue.js'], 
+      color: 'white'
+    }
+  ]
+
   return (
 
     <><CoverScene />
       <div className='container'>
         <Cover />
         <div className="observer" data-title="About" />
-        <About />
+        <About about={about}/>
         <div className="observer" data-title="Projects & Activities" />
         <ProjectandActivite />
       </div>

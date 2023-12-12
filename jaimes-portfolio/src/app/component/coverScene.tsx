@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+// import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
-import { deflate } from 'zlib';
+
 
 const CoverScene: React.FC = () => {
 
@@ -225,7 +225,7 @@ const CoverScene: React.FC = () => {
 
     return (
         <>
-            <div className=" absolute z-50 bottom-0 left-0 w-full h-screen bg-gradient-to-t from-white to-transparent" />
+            {/* <div className=" absolute z-50 bottom-0 left-0 w-full h-screen bg-gradient-to-t from-white to-transparent" /> */}
             <div className='absolute top-0 left-0 z-0' ref={containerRef} />
         </>
 

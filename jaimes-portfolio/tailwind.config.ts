@@ -28,7 +28,7 @@ const config: Config = {
         'prop-3-right':'10rem'
       },
       colors:{
-        'ci-1':'#2b2b2b',
+        'ci-1':'#2B2B2B',
         'D8DDB6': '#D8DDB6',
         '68B8B9': '#68B8B9',
         '674188': '#674188',
