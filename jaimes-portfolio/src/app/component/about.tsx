@@ -7,7 +7,7 @@ const About = (props: AboutData) => {
     return (
         <>
 
-            <div className="mt-56 h-auto text-white observer p-12 z-10 relative" data-title="About">
+            <div className="mt-56 h-auto text-white observer md:p-12 z-10 relative" data-title="About">
                 <div className="mt-10">
                     <h1 className="text-4xl text-center">About Me</h1>
                 </div>
@@ -39,11 +39,11 @@ const About = (props: AboutData) => {
                             <p>+66 824590763</p>
                         </div>
                     </div>
-                    <div>
+                    <div className="w-full">
                         {props.about.map((e) => {
                             return (
 
-                                <div className="flex flex-col gap-4 my-5 p-6 shadow-lg shadow-stone-900 rounded-lg hover:shadow-amber-500 hover:shadow-md" key={e.id}>
+                                <div className="w-full flex flex-col gap-4 my-5 p-6 shadow-lg shadow-stone-900 rounded-lg hover:shadow-amber-500 hover:shadow-md" key={e.id}>
                                     <h1 className="text-2xl font-bold text-amber-500">{e.title}</h1>
                                     <AboutDeteil {...e} />
                                 </div>
