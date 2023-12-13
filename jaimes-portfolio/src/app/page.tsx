@@ -67,7 +67,7 @@ export default function Home() {
   ];
 
   const about: Abouts[] = [
-    {
+    { id:1,
       title: 'Abilities',
       detail: [
         {id:1, list:'Fast and easy learner'}, 
@@ -78,7 +78,7 @@ export default function Home() {
       ],
       color: 'white'
     },
-    {
+    { id:2,
       title: 'Programs',
       detail: [
         {id:1, list:'Visual Studio Code'},
@@ -92,7 +92,7 @@ export default function Home() {
       ], 
       color: 'white'
     },
-    {
+    { id:3,
       title: 'Languages & Skills',
       detail: [
         {id:1, list:'Typescript'}, 
@@ -106,7 +106,7 @@ export default function Home() {
       ], 
       color: 'white'
     },
-    {
+    { id:4,
       title: 'Frameworks & Tools',
       detail: [
         {id:1, list:'React.js'}, 

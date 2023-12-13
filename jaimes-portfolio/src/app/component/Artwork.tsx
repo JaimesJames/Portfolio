@@ -28,16 +28,16 @@ const Artwork = () => {
 
             </div>
             <div className='p-4 mb-20'>
-                <h2 className="text-white text-3xl font-bold text-center">3D Working</h2>
-                <div className='flex justify-around p-10'>
+                <h2 className="text-white text-3xl font-bold text-center mb-">3D Working</h2>
+                <div className='flex md:p-10 md:flex-row md:gap-0 flex-col gap-4 justify-center content-center'>
                     <YouTubePlayer videoId="lbDm7tlKMAg" />
                     <YouTubePlayer videoId="md8lLVtfsL4" />
                     
                 </div>
             </div>
             <div className="flex gap-20 w-full p-4">
-                <div>
-                    <Image src='/artwork/IMG_4605.png' width={400} height={200} alt="IG" />
+                <div className='hidden md:block'>
+                    <Image src='/artwork/IMG_4605.png'  width={400} height={200} alt="IG" />
                 </div>
                 <div className="flex flex-col gap-5">
                     <h2 className="text-white text-3xl font-bold">Digital Art</h2>
