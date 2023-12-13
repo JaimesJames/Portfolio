@@ -2,22 +2,11 @@ import Link from "../../../node_modules/next/link"
 
 import Title from "./nav-item"
 import type { Navprop, Item } from '../type/typecenter'
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 
 
 const Nav = (props: Navprop) => {
 
-    // const handleScroll = () => {
-    //     var timer = null;
-    //     window.addEventListener('scroll', function () {
-    //         if (timer !== null) {
-    //             clearTimeout(timer);
-    //         }
-    //         timer = setTimeout(function () {
-    //             // do something
-    //         }, 150);
-    //     }, false);
-    // }
 
     const [navState, setNavState] = useState('show')
     useEffect(() => {
@@ -27,18 +16,9 @@ const Nav = (props: Navprop) => {
         else if (navState != 'lock') {
             setNavState('show')
         }
-        // console.log(navState)
-
 
     }, [props.y])
-    // useEffect(() => {
-    //     window.addEventListener('scroll', handleScroll);
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     }
-    // }, []);
 
-    let count = 0
 
     return (
         <>

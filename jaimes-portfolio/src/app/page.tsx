@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Cover from './component/cover'
 import About from './component/about'
@@ -59,7 +59,18 @@ export default function Home() {
     }
 
   }, []);
-  // console.log(title)
+  
+  const sectionRefs = {
+    sectionAbout: useRef(null),
+    sectionPJnAV: useRef(null),
+    sectionArtwk: useRef(null)
+  }
+
+  // const handleSection =(ref)=>{
+  //   ref.current?.scrollIntoView({behavior: 'smooth'})
+  // }
+
+  
   const inititem: Item[] = [
     { id: 1, spot: 'About Me', fill: `${title === 'About' ? 'white' : 'none'}` },
     { id: 2, spot: 'Projects & Activities', fill: `${title === 'Projects & Activities' ? 'white' : 'none'}` },

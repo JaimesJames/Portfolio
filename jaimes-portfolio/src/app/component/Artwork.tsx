@@ -32,27 +32,35 @@ const Artwork = () => {
                 <div className='flex md:p-10 md:flex-row md:gap-0 flex-col gap-4 justify-center content-center'>
                     <YouTubePlayer videoId="lbDm7tlKMAg" />
                     <YouTubePlayer videoId="md8lLVtfsL4" />
-                    
+
                 </div>
             </div>
-            <div className="flex gap-20 w-full p-4">
-                <div className='hidden md:block'>
-                    <Image src='/artwork/IMG_4605.png'  width={400} height={200} alt="IG" />
-                </div>
-                <div className="flex flex-col gap-5">
-                    <h2 className="text-white text-3xl font-bold">Digital Art</h2>
-                    <div className="flex flex-wrap gap-5">
-                        <Image src='/artwork/1.jpg' width={200} height={200} alt="IG1" />
-                        <Image src='/artwork/2.png' width={300} height={200} alt="IG2" />
-                        <Image src='/artwork/3.jpg' width={300} height={200} alt="IG3" />
-                        <Image src='/artwork/4.jpg' width={300} height={200} alt="IG4" />
-                        <Image src='/artwork/5.jpg' width={300} height={200} alt="IG5" />
-                        <Image src='/artwork/6.png' width={300} height={200} alt="IG6" />
-                        <Image src='/artwork/7.png' width={300} height={200} alt="IG7" />
-                        <Image src='/artwork/8.jpg' width={300} height={200} alt="IG7" />
+            <h2 className="text-white text-3xl font-bold text-center">Digital Art</h2>
+            <div className="w-full">
+                {/* <div className='w-full hidden md:block'>
+                    <Image src='/artwork/IMG_4605.png' width="0" height="0" sizes="50vw" className="w-auto h-auto" alt="IG" />
+                </div> */}
+
+                <div className="grid md:grid-cols-4 grid-cols-2 gap-4 aspect-square">
+                    <div className='flex flex-col gap-4'>
+                        <Image src='/artwork/1.jpg' width="0" height="0" sizes="100vw" className="w-auto h-auto" alt="IG1" />
+                        <Image src='/artwork/2.png' width="0" height="0" sizes="100vw" className="w-auto h-auto" alt="IG2" />
+
+                    </div>
+                    <div className='flex flex-col gap-4'>
+                        <Image src='/artwork/4.jpg' width="0" height="0" sizes="100vw" className="w-auto h-auto" alt="IG4" />
+                        <Image src='/artwork/5.jpg' width="0" height="0" sizes="100vw" className="w-auto h-auto" alt="IG5" />
+
+                    </div>
+                    <div className='flex flex-col gap-4'>
+                        <Image src='/artwork/7.png' width="0" height="0" sizes="100vw" className="w-auto h-auto" alt="IG7" />
+                        <Image src='/artwork/8.jpg' width="0" height="0" sizes="100vw" className="w-auto h-auto" alt="IG7" />
+                    </div>
+                    <div className='flex flex-col gap-4'>
+                        <Image src='/artwork/3.jpg' width="0" height="0" sizes="100vw" className="w-auto h-auto" alt="IG3" />
+                        <Image src='/artwork/6.png' width="0" height="0" sizes="100vw" className="w-auto h-auto" alt="IG6" />
                     </div>
                 </div>
-
             </div>
         </>
     )
