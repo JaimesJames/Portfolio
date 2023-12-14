@@ -130,11 +130,10 @@ export default function Home() {
         <Cover />
         <div className="observer" data-title="About" id='About Me' />
         <About about={about}/>
-        <div className="observer" data-title="Projects & Activities" id='Projects & Activities' />
+        <div className="h-2 observer" data-title="Projects & Activities" id='Projects & Activities' />
         <ProjectandActivite />
-        <div className="observer" data-title="Projects & Activities" />
-        <div className="observer" data-title="Artwork" id='Artwork' />
-        <div className="observer" data-title="Artwork" />
+        <div className="h-2 observer" data-title="Projects & Activities" />
+        <div className="h-2 observer" data-title="Artwork" id='Artwork' />
         <Artwork/>
       </div>
       <Footer/>
