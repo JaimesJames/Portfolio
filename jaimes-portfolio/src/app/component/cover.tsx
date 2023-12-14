@@ -1,20 +1,47 @@
 // import CoverScene from "./coverScene"
 
-const Cover = () => {
+import { useEffect,useState } from "react";
 
-    
+const Cover = () => {
+    const letters = "!@#$%^&*()_+{}|:<>?~`1234567890-=qwertyuiop[]asdfghjkl;'zxcvbnm,./";
+    let interval: any = null;
+    const [showTitle, setShowTitle] = useState("ERROR♥♦");
+    const title = "JaimesJames";
+
+    useEffect(() => {
+        let iteration = 0;
+        clearInterval(interval);
+
+        interval = setInterval(() => {
+            const text = title.split("").map((_, index) => {
+                if (index < iteration) {
+                    return title[index];
+                }
+                return letters[Math.floor(Math.random() * letters.length)];
+            });
+
+            setShowTitle(text.join(""));
+
+            if (iteration >= title.length) {
+                clearInterval(interval);
+            }
+
+            iteration += 1 / 3;
+        }, 50);
+    }, []);
+
 
     return (
 
         <div className=" p-4 h-screen w-full flex flex-col content-center justify-center relative z-50">
-            <div className=" z-20 flex flex-col justify-between gap-y-9">
+            <div className=" z-20 flex flex-col justify-between gap-y-9 drop-shadow">
                 <h3 className="text-center text-3xl text-white font-thab">Hi, This is</h3>
-                <h1 className="text-center md:text-8xl text-6xl font-thab text-white"><span className="font-mako text-amber-500">Supanat</span>'s</h1>
+                <h1 className="text-center md:text-8xl text-4xl font-thab text-white"><span className="font-mono text-amber-500">{showTitle}</span>'s</h1>
                 <h3 className="text-center text-3xl text-white font-thab">Portfolio</h3>
             </div>
 
             <div>
-                
+
                 {/* <div className="lg:block hidden">
                     <svg className="absolute right-prop-1-t top-prop-1-r" width="1600" height="1605" viewBox="0 0 1520 1525" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="1155.06" cy="571.06" r="22.1709" transform="rotate(45.5266 1155.06 571.06)" stroke="#2B2B2B" />
@@ -30,7 +57,7 @@ const Cover = () => {
                         <circle cx="261.904" cy="162.035" r="10.167" transform="rotate(45.5266 261.904 162.035)" fill="#2B2B2B" stroke="#2B2B2B" />
                     </svg>
                 </div> */}
-                
+
                 <svg className="absolute z-100 left-sqr-1 top-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25" height="25" fill="#fff" />
                 </svg>
@@ -48,7 +75,7 @@ const Cover = () => {
                 </svg> */}
 
             </div>
-            
+
 
 
         </div>

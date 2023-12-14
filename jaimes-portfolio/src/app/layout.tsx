@@ -15,9 +15,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='scroll-smooth'>
       <body className={inter.className}>
-        <div className='text-c1 overscroll-x-auto'>
+        <div className='text-c1 overscroll-x-auto scroll-smooth'>
           {children}
         </div>
       </body>

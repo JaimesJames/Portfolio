@@ -11,6 +11,10 @@
   font-family: thabit;
   src: url(./font/Thabit.ttf);
 }
+@font-face {
+  font-family: MajorMonoDisplay-Regular;
+  src: url(./font/MajorMonoDisplay-Regular.ttf);
+}
 
 
 /* :root {

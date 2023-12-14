@@ -46,6 +46,7 @@ const config: Config = {
       fontFamily:{
         'mako':['Makota'],
         'thab' :['Thabit'],
+        'mono' :['MajorMonoDisplay-Regular']
       },
     },
     

@@ -58,18 +58,7 @@ export default function Home() {
       })
     }
 
-  }, []);
-  
-  const sectionRefs = {
-    sectionAbout: useRef(null),
-    sectionPJnAV: useRef(null),
-    sectionArtwk: useRef(null)
-  }
-
-  const handleSection =()=>{
-    console.log('eiei')
-  }
-
+  }, []); 
   
   const inititem: Item[] = [
     { id: 1, spot: 'About Me', fill: `${title === 'About' ? 'white' : 'none'}` },
@@ -139,16 +128,17 @@ export default function Home() {
     <div className="md:block hidden"><CoverScene /></div>
       <div className='container'>
         <Cover />
-        <div className="observer" data-title="About" />
+        <div className="observer" data-title="About" id='About Me' />
         <About about={about}/>
-        <div className="observer" data-title="Projects & Activities" />
+        <div className="observer" data-title="Projects & Activities" id='Projects & Activities' />
         <ProjectandActivite />
         <div className="observer" data-title="Projects & Activities" />
+        <div className="observer" data-title="Artwork" id='Artwork' />
         <div className="observer" data-title="Artwork" />
         <Artwork/>
       </div>
       <Footer/>
-      <Nav handleSection={handleSection} items={inititem} y={scrollPosition} />
+      <Nav items={inititem} y={scrollPosition} />
     </>
   )
 }
