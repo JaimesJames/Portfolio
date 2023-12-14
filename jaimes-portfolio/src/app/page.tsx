@@ -9,7 +9,7 @@ import CoverScene from "./component/coverScene";
 import Artwork from "./component/Artwork";
 import Footer from "./component/footer";
 
-import type { Item, Abouts } from './type/typecenter'
+import type { Item, Abouts, ParentProps } from './type/typecenter'
 
 
 export default function Home() {
@@ -66,9 +66,9 @@ export default function Home() {
     sectionArtwk: useRef(null)
   }
 
-  // const handleSection =(ref)=>{
-  //   ref.current?.scrollIntoView({behavior: 'smooth'})
-  // }
+  const handleSection =()=>{
+    console.log('eiei')
+  }
 
   
   const inititem: Item[] = [
@@ -147,7 +147,7 @@ export default function Home() {
         <Artwork/>
       </div>
       <Footer/>
-      <Nav items={inititem} y={scrollPosition} />
+      <Nav handleSection={handleSection} items={inititem} y={scrollPosition} />
     </>
   )
 }
