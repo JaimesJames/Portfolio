@@ -5,8 +5,8 @@ import mock from '@/app/img/coral.png'
 const Coral = () => {
     return (
         <>
-            <div className=" p-4 w-full md:h-500 flex flex-col content-center justify-center relative z-10 bg-sky-100 rounded-2xl">
-                <div className="">
+            <div className=" p-4 w-full md:h-500 flex flex-col content-center justify-center relative z-10 md:bg-white text-white md:text-ci-1 rounded-2xl">
+                <div className="md:block hidden">
                     <svg className="absolute left-sqr-1 top-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="25" height="25" fill="#2B2B2B" />
                     </svg>
@@ -21,13 +21,13 @@ const Coral = () => {
                     </svg>
                 </div>
                 <div className="md:p-20 p-5 flex md:flex-row flex-col-reverse justify-between content-center text-left">
-                    <div className="flex flex-col gap-5 content-center justify-center p-14">
+                    <div className="flex flex-col gap-5 content-center justify-center md:p-14">
                         <div>
-                            <h1 className="text-3xl font-bold text-center md:text-start">Coral Corjai Kiosk</h1>
+                            <h1 className="text-4xl font-bold text-center md:text-start text-68B8B9">Coral Corjai Kiosk</h1>
                             <h4 className="text-2xl text-center md:text-start">Co-Architecture Project</h4>
                         </div>
-                        <p className="text-lg ">Coral Corjai is a project from the Multimedia Programming course, where we collaborated with the School of Architecture, Art, and Design. They were responsible for web design, and then the IT team brought the website to life</p>
-                        <p className="text-lg ">Our project addresses the care of Thailand's seas, using a kiosk format for museum displays. This design ensures the website is best viewed on iPads.</p>
+                        <p className="text-md ">Coral Corjai is a project from the Multimedia Programming course, where we collaborated with the School of Architecture, Art, and Design. They were responsible for web design, and then the IT team brought the website to life</p>
+                        <p className="text-md ">Our project addresses the care of Thailand's seas, using a kiosk format for museum displays. This design ensures the website is best viewed on iPads.</p>
                         <div className=" w-auto h-auto flex gap-4 md:justify-start justify-center">
                             <a href="https://github.com/professorkong/SDG">
                                 <div className="w-14 h-14 bg-D8DDB6 rounded-full flex justify-center content-center p-2">

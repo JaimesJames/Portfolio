@@ -27,16 +27,17 @@ const Artwork = () => {
 
 
             </div>
-            <div className='p-4 mb-20'>
-                <h2 className="text-white text-3xl font-bold text-center mb-">3D Working</h2>
-                <div className='flex md:p-10 md:flex-row md:gap-0 flex-col gap-4 justify-center content-center'>
+            <div className='w-full p-4 mb-20'>
+                <h2 className="text-white text-3xl font-bold text-center mb-10">3D Working</h2>
+                <div className='w-full flex md:p-10 md:flex-row md:gap-0 flex-col gap-4 justify-center content-center'>
                     <YouTubePlayer videoId="lbDm7tlKMAg" />
                     <YouTubePlayer videoId="md8lLVtfsL4" />
 
                 </div>
             </div>
-            <h2 className="text-white text-3xl font-bold text-center">Digital Art</h2>
+            
             <div className="w-full">
+                <h2 className="text-white text-3xl font-bold text-center mb-10">Digital Art</h2>
                 {/* <div className='w-full hidden md:block'>
                     <Image src='/artwork/IMG_4605.png' width="0" height="0" sizes="50vw" className="w-auto h-auto" alt="IG" />
                 </div> */}

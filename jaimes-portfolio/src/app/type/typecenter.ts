@@ -8,6 +8,4 @@ export type Abouts = {id:number, title:string, detail:Detail[] , color:string}
 
 export type Detail = {id:number, list:string}
 
-export type ParentProps = {
-    handleSection: () => void;
-};
+export type ParentProps = {handleSection: () => void;};

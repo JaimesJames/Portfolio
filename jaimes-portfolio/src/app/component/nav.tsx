@@ -7,7 +7,6 @@ import { useEffect, useState, useRef } from "react"
 
 const Nav = (props: Navprop, {handleSection}:ParentProps) => {
 
-
     const [navState, setNavState] = useState('show')
     useEffect(() => {
         if (props.y > 500 && navState != 'lock') {

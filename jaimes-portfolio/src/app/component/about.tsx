@@ -52,7 +52,7 @@ const About = (props: AboutData) => {
                     </div>
                 </div>
             </div>
-            <div className="absolute z-0 top-full left-0 w-full h-1/2 bg-gradient-to-t from-transparent to-121212" />
+            <div className="md:block hidden absolute z-0 top-full left-0 w-full h-1/2 bg-gradient-to-t from-transparent to-121212" />
         </>
     )
 }

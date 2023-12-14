@@ -135,7 +135,8 @@ export default function Home() {
 
   return (
 
-    <><CoverScene />
+    <>
+    <div className="md:block hidden"><CoverScene /></div>
       <div className='container'>
         <Cover />
         <div className="observer" data-title="About" />

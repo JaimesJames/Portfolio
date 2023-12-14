@@ -8,11 +8,6 @@ const config: Config = {
   ],
   theme: {
     
-    fontFamily:{
-      'mako':['Makota'],
-      'thab' :['Thabit'],
-    },
-    
     extend: {textColor:
       {
       'ci-1':'#2B2B2B'
@@ -47,7 +42,11 @@ const config: Config = {
       },
       height:{
         '500':'500px'
-      }
+      },
+      fontFamily:{
+        'mako':['Makota'],
+        'thab' :['Thabit'],
+      },
     },
     
   },
