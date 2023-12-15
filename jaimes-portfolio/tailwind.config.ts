@@ -46,7 +46,9 @@ const config: Config = {
       fontFamily:{
         'mako':['Makota'],
         'thab' :['Thabit'],
-        'mono' :['MajorMonoDisplay-Regular']
+        'mono' :['MajorMonoDisplay-Regular'],
+        'bq':['LibreBarcode39-Regular'],
+        'lf':['Linefont-VariableFont']
       },
     },
     

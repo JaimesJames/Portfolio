@@ -6,7 +6,7 @@ const Unite = () => {
     return (
         <>
             <div className=" p-4 md:h-500 w-full flex flex-col content-center justify-center relative z-10 md:bg-yellow-600 rounded-2xl md:text-ci-1 text-white">
-                <div>
+                <div className="md:block hidden">
                     <svg className="absolute left-sqr-1 top-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="25" height="25" fill="#2B2B2B" />
                     </svg>

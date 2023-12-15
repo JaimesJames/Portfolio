@@ -16,6 +16,16 @@
   src: url(./font/MajorMonoDisplay-Regular.ttf);
 }
 
+@font-face {
+  font-family: LibreBarcode39-Regular;
+  src: url(./font/LibreBarcode39-Regular.ttf);
+}
+
+@font-face {
+  font-family: Linefont-VariableFont;
+  src: url(./font/Linefont-VariableFont.ttf);
+}
+
 
 /* :root {
   --foreground-rgb: 0, 0, 0;

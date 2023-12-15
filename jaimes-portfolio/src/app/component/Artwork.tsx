@@ -29,7 +29,7 @@ const Artwork = () => {
             </div>
             <div className='w-full p-4 mb-20'>
                 <h2 className="text-white text-3xl font-bold text-center mb-10">3D Working</h2>
-                <div className='w-full flex md:p-10 md:flex-row md:gap-0 flex-col gap-4 justify-center content-center'>
+                <div className='w-full flex md:p-10 xl:flex-row md:gap-0 flex-col gap-4 justify-center content-center'>
                     <YouTubePlayer videoId="lbDm7tlKMAg" />
                     <YouTubePlayer videoId="md8lLVtfsL4" />
 
