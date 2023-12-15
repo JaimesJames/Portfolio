@@ -40,7 +40,7 @@ const CoverScene: React.FC = () => {
             {
                 clearcoat: 1.0,
                 clearcoatRoughness: 0.1,
-                metalness: 0.9,
+                metalness: 0.5,
                 roughness: 0.0,
                 color: 0xffa952,
                 ior: 0,
@@ -53,14 +53,19 @@ const CoverScene: React.FC = () => {
         const geometry2 = new THREE.SphereGeometry(20, 50, 50);
         const geometry3 = new THREE.SphereGeometry(5, 50, 50);
 
-        const geometry4 = new THREE.BoxGeometry(5,5,5)
-        
-        const geometry5 = new THREE.TorusGeometry( 5, 1.5, 16, 100 ); 
-        
-        const geometry6 = new THREE.TetrahedronGeometry(5,0)
+        const geometry4 = new THREE.BoxGeometry(5, 5, 5)
+
+        const geometry5 = new THREE.TorusGeometry(5, 1.5, 16, 100);
+
+        const geometry6 = new THREE.TetrahedronGeometry(5, 0)
+
+        const spherep1 = new THREE.SphereGeometry(3, 50, 50)
+
+        const spherep2 = new THREE.SphereGeometry(.5, 50, 50)
 
         const sphere1 = new THREE.Mesh(geometry1, material)
         sphere1.position.set(60, 20, 0)
+        
 
         const sphere2 = new THREE.Mesh(geometry2, material)
         sphere2.position.set(-60, -30, 5)
@@ -68,16 +73,16 @@ const CoverScene: React.FC = () => {
         const sphere3 = new THREE.Mesh(geometry3, material)
         sphere3.position.set(-20, 50, 1)
 
-        const cube1 = new THREE.Mesh(geometry4,material)
+        const cube1 = new THREE.Mesh(geometry4, material)
         cube1.position.set(-80, 40, 0)
-        
-        const torus1 = new THREE.Mesh(geometry5,material)
+
+        const torus1 = new THREE.Mesh(geometry5, material)
         torus1.position.set(-80, 40, 0)
-        
-        const tri1 = new THREE.Mesh(geometry6,material)
+
+        const tri1 = new THREE.Mesh(geometry6, material)
         tri1.position.set(60, -40, 0)
 
-        
+
 
 
 
@@ -118,12 +123,39 @@ const CoverScene: React.FC = () => {
 
 
 
-        var light1 = new THREE.AmbientLight(new THREE.Color('white'), 5);
+        var light1 = new THREE.AmbientLight(new THREE.Color('orange'), 1);
         scene.add(light1);
 
         const directionalLight = new THREE.DirectionalLight(0xffffff, 15);
         directionalLight.position.set(0, 1, 1)
-        scene.add(directionalLight);
+        // scene.add(directionalLight);
+
+        const pointLight1 = new THREE.PointLight(0xffbc82, 10000);
+        pointLight1.add(new THREE.Mesh(spherep1, new THREE.MeshBasicMaterial({ color: 0xffffff })));
+        pointLight1.position.set(100, 0, 0)
+
+        const pointLight2 = new THREE.PointLight(0xffbc82, 10000);
+        pointLight2.add(new THREE.Mesh(spherep2, new THREE.MeshBasicMaterial({ color: 0xffffff })));
+        pointLight2.position.set(10, 0, 0)
+
+        const pointLight3 = new THREE.PointLight(0xffbc82, 10000);
+        pointLight3.add(new THREE.Mesh(spherep2, new THREE.MeshBasicMaterial({ color: 0xffffff })));
+        pointLight3.position.set(10, 0, 0)
+
+        const small1 = new THREE.Group()
+        small1.add(pointLight2)
+        small1.position.set(100,0,0)
+
+        const small2 = new THREE.Group()
+        small2.add(pointLight3)
+        small2.position.set(-100,20,0)
+        
+
+        const fast = new THREE.Group()
+        fast.add(pointLight1)
+        scene.add(small1)
+        scene.add(small2)
+        scene.add(fast);
 
 
         const render = () => {
@@ -169,9 +201,9 @@ const CoverScene: React.FC = () => {
         controls.enableZoom = false
 
         const spheres = new THREE.Group()
-        spheres.add(sphere1) 
-        spheres.add(sphere2) 
-        spheres.add(sphere3) 
+        spheres.add(sphere1)
+        spheres.add(sphere2)
+        spheres.add(sphere3)
         scene.add(spheres)
         const animate = () => {
 
@@ -179,15 +211,23 @@ const CoverScene: React.FC = () => {
 
             var delayInMilliseconds = 1000; //1 second
 
-            
+            fast.rotation.z -= 0.05
+            fast.rotation.x -= 0.005
+
+            small1.rotation.z -= 0.005
+            small1.rotation.x -= 0.005
+
+            small2.rotation.z -= 0.005
+            small2.rotation.y -= 0.005
+
             spheres.rotation.z -= 0.0001
 
             torus1.rotation.x += 0.005
-           
+
             torus1.rotation.y += 0.005
 
             tri1.rotation.z += 0.005
-           
+
             tri1.rotation.y += 0.005
 
             sphere3.position.set(-20, 50, 1)
@@ -200,7 +240,7 @@ const CoverScene: React.FC = () => {
             render()
 
         }
-        
+
 
         const handleResize = () => {
             const width = window.innerWidth;
