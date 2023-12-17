@@ -22,7 +22,7 @@ const Domfinding = () => {
                 </div>
                 <div className="md:p-20 p-5  md:flex-row flex flex-col justify-between content-center text-left">
                     <div>
-                        <Image src={mock} width={800} height={100} alt='coral' />
+                        <Image src={mock} width={600} height={100} alt='coral' />
                     </div>
                     <div className="flex flex-col gap-5 content-center justify-center md:p-14">
                         <div>

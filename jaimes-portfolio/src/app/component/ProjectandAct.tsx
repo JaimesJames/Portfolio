@@ -27,7 +27,7 @@ const ProjectandActivite = () => {
                         </svg>
                     </div>
                 </div>
-                <div className="flex flex-col gap-10">
+                <div className="flex flex-col gap-32">
                     <Coral />
                     <Domfinding />
                     <Itcamp />
