@@ -14,8 +14,7 @@ const CoverScene: React.FC = () => {
     useEffect(() => {
         // const width = document.getElementsByClassName('container')[0].clientWidth
         const scene = new THREE.Scene();
-        let aspect = window.innerWidth / window.innerHeight;
-        const frustumSize = 100;
+        const height = window.innerHeight;
         const camera = new THREE.PerspectiveCamera(75, (window.innerWidth / window.innerHeight), 0.1, 1000)
 
         // const camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, .1, 1000  );
@@ -160,12 +159,9 @@ const CoverScene: React.FC = () => {
 
         const render = () => {
 
-            const timer = 0.0001 * Date.now();
 
             camera.position.x += (mouseX - camera.position.x) * 0.05;
             camera.position.y += (-mouseY - camera.position.y) * 0.05;
-
-            // sphere1.position.set( 60+(-mouseX - camera.position.x) * 0.05, 20+(-mouseY - camera.position.y) * 0.05, 0 );
 
             if (camera.position.x < -5) {
                 camera.position.x = -5
@@ -194,10 +190,6 @@ const CoverScene: React.FC = () => {
         controls.update();
         controls.enablePan = false;
         controls.enableDamping = true;
-        // controls.maxAzimuthAngle = 40
-        // controls.maxPolarAngle = 40
-        // controls.minAzimuthAngle = -40
-        // controls.minPolarAngle = -40
         controls.enableZoom = false
 
         const spheres = new THREE.Group()
@@ -208,8 +200,6 @@ const CoverScene: React.FC = () => {
         const animate = () => {
 
             requestAnimationFrame(animate);
-
-            var delayInMilliseconds = 1000; //1 second
 
             fast.rotation.z -= 0.05
             fast.rotation.x -= 0.005
@@ -234,8 +224,6 @@ const CoverScene: React.FC = () => {
 
             controls.update();
 
-            // stats.update();
-
             renderer.render(scene, camera);
             render()
 
@@ -244,7 +232,7 @@ const CoverScene: React.FC = () => {
 
         const handleResize = () => {
             const width = window.innerWidth;
-            const height = window.innerHeight;
+            
 
             camera.aspect = width / height;
             camera.updateProjectionMatrix();
@@ -265,7 +253,6 @@ const CoverScene: React.FC = () => {
 
     return (
         <>
-            {/* <div className=" absolute z-50 bottom-0 left-0 w-full h-screen bg-gradient-to-t from-white to-transparent" /> */}
             <div className='absolute top-0 left-0 z-0' ref={containerRef} />
         </>
 
