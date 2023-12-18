@@ -14,7 +14,6 @@ const CoverScene: React.FC = () => {
     useEffect(() => {
         // const width = document.getElementsByClassName('container')[0].clientWidth
         const scene = new THREE.Scene();
-        let height = window.innerHeight;
         const camera = new THREE.PerspectiveCamera(75, (window.innerWidth / window.innerHeight), 0.1, 1000)
 
         // const camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, .1, 1000  );
@@ -232,8 +231,8 @@ const CoverScene: React.FC = () => {
 
         const handleResize = () => {
             const width = window.innerWidth;
+            const height = window.innerHeight;
             
-
             camera.aspect = width / height;
             camera.updateProjectionMatrix();
 
