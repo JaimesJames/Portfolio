@@ -1,5 +1,6 @@
 import React from 'react';
 import YouTubePlayer from '../component/YouTubePlayer';
+import Models from './Models';
 
 import Image from "next/image"
 const Artwork = () => {
@@ -34,13 +35,13 @@ const Artwork = () => {
                     <YouTubePlayer videoId="md8lLVtfsL4" />
 
                 </div>
+                <Models/>
+                
             </div>
             
             <div className="w-full">
                 <h2 className="text-white text-3xl font-bold text-center mb-10">Digital Art</h2>
-                {/* <div className='w-full hidden md:block'>
-                    <Image src='/artwork/IMG_4605.png' width="0" height="0" sizes="50vw" className="w-auto h-auto" alt="IG" />
-                </div> */}
+            
 
                 <div className="grid md:grid-cols-4 grid-cols-2 gap-4 aspect-square">
                     <div className='flex flex-col gap-4'>

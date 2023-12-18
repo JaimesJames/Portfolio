@@ -43,7 +43,7 @@ const About = (props: AboutData) => {
                         {props.about.map((e) => {
                             return (
 
-                                <div className="w-full flex flex-col gap-4 my-5 p-6 shadow-lg shadow-stone-900 rounded-lg hover:shadow-amber-500 hover:shadow-md" key={e.id}>
+                                <div className="w-full flex flex-col gap-4 my-5 p-6 shadow-lg shadow-stone-900 rounded-lg hover:shadow-amber-500 hover:shadow-md bg-ci-1" key={e.id}>
                                     <h1 className="text-2xl font-bold text-amber-500">{e.title}</h1>
                                     <AboutDeteil {...e} />
                                 </div>
