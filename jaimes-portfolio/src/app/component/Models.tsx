@@ -25,13 +25,13 @@ const Models: React.FC = () => {
 
         renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
         container?.appendChild(renderer.domElement);
-        camera.position.z = 5;
+        camera.position.z = 100;
         renderer.setClearColor(0x242424, 1);
 
 
 
-        loader.load(`${models[2].path}`, function (gltf: any) {
-            gltf.scene.scale.set(50, 50, 50);
+        loader.load(`${models[1].path}`, function (gltf: any) {
+            gltf.scene.scale.set(3, 3, 3);
             const root = gltf.scene;
             scene.add(root);
             const renderScene = () => {
