@@ -5,15 +5,15 @@ import { OrbitControls } from 'three/examples/jsm/Addons.js';
 
 const Models: React.FC = () => {
 
-    const models = [
+    const modelers = [
         { id: 1, path: 'model/pump.gltf' },
         { id: 2, path: 'model/bee.gltf' },
         { id: 3, path: 'model/shoes.gltf' },
     ]
 
-    const containerRef = useRef<HTMLDivElement>(null);
+    const models:any = []
 
-    const [currentModel, setCurrentModel] = useState(0)
+    const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const scene = new THREE.Scene();
@@ -30,21 +30,28 @@ const Models: React.FC = () => {
 
 
 
-        loader.load(`${models[1].path}`, function (gltf: any) {
+        loader.load(`model/pump.gltf`, function (gltf: any) {
+            gltf.scene.scale.set(5, 5, 5);
+            models.push(gltf.scene)
+            scene.add(models[0]);
+        }, undefined, function (error: any) {
+
+            console.error(error);
+
+        });
+
+        loader.load(`model/bee.gltf`, function (gltf: any) {
             gltf.scene.scale.set(3, 3, 3);
-            const root = gltf.scene;
-            scene.add(root);
-            const renderScene = () => {
-                renderer.render(scene, camera);
-                requestAnimationFrame(renderScene);
-                console.log(root.rotation.y)
+            models.push(gltf.scene)
+        }, undefined, function (error: any) {
 
-            };
+            console.error(error);
 
-            // Call the renderScene function to start the animation loop
-            animate()
-            renderScene();
+        });
 
+        loader.load(`model/shoes.gltf`, function (gltf: any) {
+            gltf.scene.scale.set(3, 3, 3);
+            models.push(gltf.scene)
         }, undefined, function (error: any) {
 
             console.error(error);
@@ -77,10 +84,6 @@ const Models: React.FC = () => {
         controls.update();
         controls.enablePan = false;
         controls.enableDamping = true;
-        // controls.maxAzimuthAngle = 4
-        // controls.maxPolarAngle = 2
-        // controls.minAzimuthAngle = -4
-        // controls.minPolarAngle = -2
         controls.enableZoom = false
 
 
@@ -99,48 +102,16 @@ const Models: React.FC = () => {
 
         const light = new THREE.AmbientLight(0xffffff, 1);
         scene.add(light);
-
-        // const spherep1 = new THREE.SphereGeometry(3, 50, 50)
-
-        // const spherep2 = new THREE.SphereGeometry(.5, 50, 50)
-
         const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
         directionalLight.position.set(0, 1, 1)
         scene.add(directionalLight);
-
-        // const pointLight1 = new THREE.PointLight(0xffbc82, 10000);
-        // pointLight1.add(new THREE.Mesh(spherep1, new THREE.MeshBasicMaterial({ color: 0xffffff })));
-        // pointLight1.position.set(100, 0, 0)
-
-        // const pointLight2 = new THREE.PointLight(0xffbc82, 10000);
-        // pointLight2.add(new THREE.Mesh(spherep2, new THREE.MeshBasicMaterial({ color: 0xffffff })));
-        // pointLight2.position.set(10, 0, 0)
-
-        // const pointLight3 = new THREE.PointLight(0xffbc82, 10000);
-        // pointLight3.add(new THREE.Mesh(spherep2, new THREE.MeshBasicMaterial({ color: 0xffffff })));
-        // pointLight3.position.set(10, 0, 0)
-
-        // const small1 = new THREE.Group()
-        // small1.add(pointLight2)
-        // small1.position.set(100, 0, 0)
-
-        // const small2 = new THREE.Group()
-        // small2.add(pointLight3)
-        // small2.position.set(-100, 20, 0)
-
-
-        // const fast = new THREE.Group()
-        // fast.add(pointLight1)
-        // scene.add(small1)
-        // scene.add(small2)
-        // scene.add(fast);
-
 
 
         const render = () => {
             renderer.render(scene, camera);
 
         }
+        console.log(models)
 
         window.addEventListener('resize', handleResize);
         document.addEventListener('mousemove', onDocumentMouseMove);
@@ -150,6 +121,7 @@ const Models: React.FC = () => {
             window.removeEventListener('resize', handleResize);
             document.removeEventListener('mousemove', onDocumentMouseMove);
             container?.removeChild(renderer.domElement)
+            
         };
 
     }, [])
