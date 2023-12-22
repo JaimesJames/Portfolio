@@ -14,16 +14,16 @@ const ProjectandActivite = () => {
                     </div>
                     <div>
                         <svg className="absolute left-sqr-1 top-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="25" height="25" fill="#2B2B2B" />
+                            <rect width="25" height="25" fill="#ff8c17" />
                         </svg>
                         <svg className="absolute left-sqr-1 bottom-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="25" height="25" fill="#2B2B2B" />
+                            <rect width="25" height="25" fill="#ff8c17" />
                         </svg>
                         <svg className="absolute right-sqr-1 top-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="25" height="25" fill="#2B2B2B" />
+                            <rect width="25" height="25" fill="#ff8c17" />
                         </svg>
                         <svg className="absolute right-sqr-1 bottom-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="25" height="25" fill="#2B2B2B" />
+                            <rect width="25" height="25" fill="#ff8c17" />
                         </svg>
                     </div>
                 </div>

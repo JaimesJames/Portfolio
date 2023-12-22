@@ -1,21 +1,15 @@
 import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { GLTFLoader } from 'three/examples/jsm/Addons.js';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
 
 const Models: React.FC = () => {
 
-    const modelers = [
-        { id: 1, path: 'model/pump.gltf' },
-        { id: 2, path: 'model/bee.gltf' },
-        { id: 3, path: 'model/shoes.gltf' },
-    ]
-
-    const models:any = []
-
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
+        const models: any = []
+
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGL1Renderer();
@@ -25,13 +19,11 @@ const Models: React.FC = () => {
 
         renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
         container?.appendChild(renderer.domElement);
-        camera.position.z = 100;
-        renderer.setClearColor(0x242424, 1);
+        camera.position.z = 30;
+        renderer.setClearColor(0x242424, 0);
 
-
-
-        loader.load(`model/pump.gltf`, function (gltf: any) {
-            gltf.scene.scale.set(5, 5, 5);
+        loader.load(`model/bee.gltf`, function (gltf: any) {
+            gltf.scene.scale.set(1, 1, 1);
             models.push(gltf.scene)
             scene.add(models[0]);
         }, undefined, function (error: any) {
@@ -39,25 +31,6 @@ const Models: React.FC = () => {
             console.error(error);
 
         });
-
-        loader.load(`model/bee.gltf`, function (gltf: any) {
-            gltf.scene.scale.set(3, 3, 3);
-            models.push(gltf.scene)
-        }, undefined, function (error: any) {
-
-            console.error(error);
-
-        });
-
-        loader.load(`model/shoes.gltf`, function (gltf: any) {
-            gltf.scene.scale.set(3, 3, 3);
-            models.push(gltf.scene)
-        }, undefined, function (error: any) {
-
-            console.error(error);
-
-        });
-
 
 
         const animate = () => {
@@ -117,11 +90,24 @@ const Models: React.FC = () => {
         document.addEventListener('mousemove', onDocumentMouseMove);
         animate()
 
+        const handleClick = (selectedModelIndex: any) => {
+            if (selectedModelIndex >= 0 && selectedModelIndex < models.length) {
+                // Clear the scene
+                scene.remove(...scene.children);
+
+                // Add the selected model to the scene
+                scene.add(models[selectedModelIndex]);
+                scene.add(directionalLight);
+                render()
+
+
+            } console.log(models.length)
+        };
+
         return () => {
             window.removeEventListener('resize', handleResize);
-            document.removeEventListener('mousemove', onDocumentMouseMove);
             container?.removeChild(renderer.domElement)
-            
+
         };
 
     }, [])
@@ -130,7 +116,6 @@ const Models: React.FC = () => {
         <>
             <div className='flex'>
                 <div className='w-full h-full flex justify-center' ref={containerRef} />
-                {/* <div className='w-52 h-52 bg-121212' onClick={()=>setCurrentModel((currentModel+1)%3)}></div > */}
             </div>
 
         </>

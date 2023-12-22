@@ -15,7 +15,7 @@ const About = (props: AboutData) => {
                     <div className="md:w-10/12 pt-10">
                         <p className="text-lg">I’m Supanat Kaewkulsri, a third-year student at KMITL, Major of IT with Multimedia. I'm actually interested in both art and computer technology. In my three years of study I always learn and participate in activities to improve my skills. I hope you like my project, and have the opportunity to work together.</p>
                         <svg className="absolute right-0 top-56 " width="9" height="151" viewBox="0 0 9 151" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="5" height="151" fill="#2B2B2B" />
+                            <rect width="5" height="151" fill="#ff8c17" />
                         </svg>
                         <div className=" w-auto h-auto flex md:flex-row justify-center md:justify-start gap-4 mt-20">
                             <a href="https://www.linkedin.com/in/supanatkaewkulsri/">
@@ -52,7 +52,7 @@ const About = (props: AboutData) => {
                     </div>
                 </div>
             </div>
-            <div className="md:block hidden absolute z-0 top-full left-0 w-full h-1/2 bg-gradient-to-t from-transparent to-121212" />
+            {/* <div className="md:block hidden absolute z-0 top-full left-0 w-full h-1/2 bg-gradient-to-t from-transparent to-121212" /> */}
         </>
     )
 }

@@ -1,7 +1,6 @@
 import { Abouts, Detail } from "../type/typecenter"
 
 const AboutDeteil = (props: Abouts) => {
-    let count = 0
     return (
         <>
             <div className="flex flex-wrap md:justify-start justify-center gap-2">

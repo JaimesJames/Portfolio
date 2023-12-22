@@ -8,7 +8,10 @@ const Cover = () => {
     const [showTitle, setShowTitle] = useState("ERROR♥♦");
     const title = "JaimesJames";
 
+
+
     useEffect(() => {
+        const blur = document.querySelector('.coversd')
         let iteration = 0;
         clearInterval(interval);
 
@@ -28,12 +31,26 @@ const Cover = () => {
 
             iteration += 1 / 3;
         }, 50);
+
+
+
+        const scrollani =()=>{
+            const y = window.scrollY
+            blur.style.setProperty('filter', `blur(${y*0.01}px)`);
+            blur.style.setProperty('transform', `translateY(${-y}px)`);
+            console.log(y)
+        }
+
+
+        document.addEventListener('scroll', scrollani)
+
+        return ()=> document.removeEventListener('scroll', scrollani)
     }, []);
 
 
     return (
 
-        <div className=" p-4 h-screen w-full flex flex-col content-center justify-center relative z-50 ">
+        <div className="coversd p-4 h-screen w-full flex flex-col content-center justify-center relative z-50 ">
             <div className=" z-20 flex flex-col justify-between gap-y-9 drop-shadow">
                 <h3 className="text-center text-3xl text-white font-thab">Hi, This is</h3>
                 <h1 className="text-center md:text-8xl text-4xl font-thab text-white"><span className="font-mono text-amber-500">{showTitle}</span>'s</h1>
@@ -68,6 +85,7 @@ const Cover = () => {
                 </svg>
 
             </div>
+            
         </div>
 
     )

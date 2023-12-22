@@ -13,6 +13,7 @@ const CoverScene: React.FC = () => {
 
     useEffect(() => {
         // const width = document.getElementsByClassName('container')[0].clientWidth
+        const blur = document.querySelector('.covers')
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, (window.innerWidth / window.innerHeight), 0.1, 1000)
 
@@ -182,6 +183,16 @@ const CoverScene: React.FC = () => {
             renderer.render(scene, camera);
 
         }
+
+        const parallel =()=>{
+            const y = window.scrollY
+            sphere1.position.set(60+y*0.05,20+y*0.1,0+y*0.5)
+            sphere2.position.set(-60-y*0.05,-30+y*0.3,5+y*0.5)
+            spheres.rotation.z = -y*0.01
+    
+        }
+
+
         render()
 
         const controls = new OrbitControls(camera, renderer.domElement);
@@ -241,18 +252,36 @@ const CoverScene: React.FC = () => {
         };
         window.addEventListener('resize', handleResize);
         document.addEventListener('mousemove', onDocumentMouseMove);
+        document.addEventListener('scroll', parallel)
         animate()
+
+        const scrollani =()=>{
+            const y = window.scrollY
+            blur.style.setProperty('filter', `blur(${y*0.05}px)`);
+            console.log(y)
+        }
+
+
+        document.addEventListener('scroll', scrollani)
+
+      
 
         return () => {
             window.removeEventListener('resize', handleResize);
             document.removeEventListener('mousemove', onDocumentMouseMove);
+            document.removeEventListener('scroll', parallel)
+            document.removeEventListener('scroll', scrollani)
             container?.removeChild(renderer.domElement)
         };
+        
     }, [])
 
     return (
         <>
+        <div className='covers w-full h-screen absolute'>
             <div className='absolute top-0 left-0 z-0' ref={containerRef} />
+            <div className="md:block hidden absolute z-0 top-full left-0 w-full h-1/2 bg-gradient-to-t from-transparent to-121212" />
+       </div>
         </>
 
     )
