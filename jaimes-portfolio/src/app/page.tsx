@@ -64,7 +64,7 @@ export default function Home() {
   const inititem: Item[] = [
     { id: 1, spot: 'About Me', fill: `${title === 'About' ? '#f59e0b' : 'none'}` },
     { id: 2, spot: 'Projects & Activities', fill: `${title === 'Projects & Activities' ? '#f59e0b' : 'none'}` },
-    { id: 3, spot: 'Artwork', fill: `${title === 'Artwork' ? '#f59e0b' : 'none'}` },
+    // { id: 3, spot: 'Artwork', fill: `${title === 'Artwork' ? '#f59e0b' : 'none'}` },
   ];
 
   const about: Abouts[] = [
@@ -117,7 +117,7 @@ export default function Home() {
         {id:5, list:'Express.js'}, 
         {id:6, list:'Svelte.js'}, 
         {id:7, list:'Vue.js'},
-        {id:8, list:'Gsap'}
+        {id:8, list:'GSAP'}
       ], 
       color: 'white'
     }
@@ -139,9 +139,6 @@ export default function Home() {
         <Models/>
       <div className='container'>
        
-        <div className="h-2 observer" data-title="Projects & Activities" />
-        <div className="h-2 observer" data-title="Artwork" id='Artwork' />
-        <Artwork/>
       </div>
       <Footer/>
       <Nav items={inititem} y={scrollPosition} />
