@@ -35,8 +35,6 @@ const Artwork = () => {
                     <YouTubePlayer videoId="md8lLVtfsL4" />
 
                 </div>
-                <Models/>
-                
             </div>
             
             <div className="w-full">

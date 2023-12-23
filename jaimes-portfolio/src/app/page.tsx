@@ -10,6 +10,7 @@ import Artwork from "./component/Artwork";
 import Footer from "./component/footer";
 
 import type { Item, Abouts, ParentProps } from './type/typecenter'
+import Models from "./component/Models";
 
 
 export default function Home() {
@@ -127,11 +128,17 @@ export default function Home() {
     <>
     <div className="md:block hidden"><CoverScene /></div>
       <div className='container'>
+      <div className="observer" data-title="Cover" id='Cover' />
         <Cover />
+        <div className="observer" data-title="Cover" id='Cover' />
         <div className="observer" data-title="About" id='About Me' />
         <About about={about}/>
         <div className="h-2 observer" data-title="Projects & Activities" id='Projects & Activities' />
         <ProjectandActivite />
+        </div> 
+        <Models/>
+      <div className='container'>
+       
         <div className="h-2 observer" data-title="Projects & Activities" />
         <div className="h-2 observer" data-title="Artwork" id='Artwork' />
         <Artwork/>

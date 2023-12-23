@@ -63,11 +63,11 @@ const CoverScene: React.FC = () => {
         const spherep2 = new THREE.SphereGeometry(.5, 50, 50)
 
         const sphere1 = new THREE.Mesh(geometry1, material)
-        sphere1.position.set(60, 20, 0)
+        // sphere1.position.set(60, 20, 0)
 
 
         const sphere2 = new THREE.Mesh(geometry2, material)
-        sphere2.position.set(-60, -30, 5)
+        // sphere2.position.set(-60, -30, 5)
 
         const sphere3 = new THREE.Mesh(geometry3, material)
         sphere3.position.set(-20, 50, 1)
@@ -91,7 +91,16 @@ const CoverScene: React.FC = () => {
         scene.add(sphere3)
         scene.add(torus1)
         scene.add(tri1)
+        const spheres = new THREE.Group()
+        spheres.add(sphere1)
+        spheres.add(sphere2)
+        spheres.add(sphere3)
+        scene.add(spheres)
 
+        const y = window.scrollY
+        sphere1.position.set(60 + y * 0.05, 20 + y * 0.1, 0 + y * 0.5)
+        sphere2.position.set(-60 - y * 0.05, -30 + y * 0.3, 5 + y * 0.5)
+        spheres.rotation.z = -y * 0.01
 
         let mouseX = 0;
         let mouseY = 0;
@@ -202,11 +211,7 @@ const CoverScene: React.FC = () => {
         controls.enableDamping = true;
         controls.enableZoom = false
 
-        const spheres = new THREE.Group()
-        spheres.add(sphere1)
-        spheres.add(sphere2)
-        spheres.add(sphere3)
-        scene.add(spheres)
+
         const animate = () => {
 
             requestAnimationFrame(animate);
