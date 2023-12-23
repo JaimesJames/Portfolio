@@ -13,7 +13,7 @@ const CoverScene: React.FC = () => {
 
     useEffect(() => {
         // const width = document.getElementsByClassName('container')[0].clientWidth
-        const blur = document.querySelector('.covers')
+        const blur: HTMLElement | null = document.querySelector('.covers')
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, (window.innerWidth / window.innerHeight), 0.1, 1000)
 
@@ -64,7 +64,7 @@ const CoverScene: React.FC = () => {
 
         const sphere1 = new THREE.Mesh(geometry1, material)
         sphere1.position.set(60, 20, 0)
-        
+
 
         const sphere2 = new THREE.Mesh(geometry2, material)
         sphere2.position.set(-60, -30, 5)
@@ -143,12 +143,12 @@ const CoverScene: React.FC = () => {
 
         const small1 = new THREE.Group()
         small1.add(pointLight2)
-        small1.position.set(100,0,0)
+        small1.position.set(100, 0, 0)
 
         const small2 = new THREE.Group()
         small2.add(pointLight3)
-        small2.position.set(-100,20,0)
-        
+        small2.position.set(-100, 20, 0)
+
 
         const fast = new THREE.Group()
         fast.add(pointLight1)
@@ -184,12 +184,12 @@ const CoverScene: React.FC = () => {
 
         }
 
-        const parallel =()=>{
+        const parallel = () => {
             const y = window.scrollY
-            sphere1.position.set(60+y*0.05,20+y*0.1,0+y*0.5)
-            sphere2.position.set(-60-y*0.05,-30+y*0.3,5+y*0.5)
-            spheres.rotation.z = -y*0.01
-    
+            sphere1.position.set(60 + y * 0.05, 20 + y * 0.1, 0 + y * 0.5)
+            sphere2.position.set(-60 - y * 0.05, -30 + y * 0.3, 5 + y * 0.5)
+            spheres.rotation.z = -y * 0.01
+
         }
 
 
@@ -243,7 +243,7 @@ const CoverScene: React.FC = () => {
         const handleResize = () => {
             const width = window.innerWidth;
             const height = window.innerHeight;
-            
+
             camera.aspect = width / height;
             camera.updateProjectionMatrix();
 
@@ -255,16 +255,19 @@ const CoverScene: React.FC = () => {
         document.addEventListener('scroll', parallel)
         animate()
 
-        const scrollani =()=>{
-            const y = window.scrollY
-            blur.style.setProperty('filter', `blur(${y*0.05}px)`);
-            console.log(y)
+        const scrollani = () => {
+            if (blur) {
+                const y = window.scrollY
+                blur.style.setProperty('filter', `blur(${y * 0.05}px)`);
+                console.log(y)
+            }
+
         }
 
 
         document.addEventListener('scroll', scrollani)
 
-      
+
 
         return () => {
             window.removeEventListener('resize', handleResize);
@@ -273,15 +276,15 @@ const CoverScene: React.FC = () => {
             document.removeEventListener('scroll', scrollani)
             container?.removeChild(renderer.domElement)
         };
-        
+
     }, [])
 
     return (
         <>
-        <div className='covers w-full h-screen absolute'>
-            <div className='absolute top-0 left-0 z-0' ref={containerRef} />
-            <div className="md:block hidden absolute z-0 top-full left-0 w-full h-1/2 bg-gradient-to-t from-transparent to-121212" />
-       </div>
+            <div className='covers w-full h-screen absolute'>
+                <div className='absolute top-0 left-0 z-0' ref={containerRef} />
+                <div className="md:block hidden absolute z-0 top-full left-0 w-full h-1/2 bg-gradient-to-t from-transparent to-121212" />
+            </div>
         </>
 
     )

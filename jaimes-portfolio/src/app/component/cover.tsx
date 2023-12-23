@@ -1,6 +1,6 @@
 // import CoverScene from "./coverScene"
 
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
 const Cover = () => {
     const letters = "!@#$%^&*()_+{}|:<>?~`1234567890-=qwertyuiop[]asdfghjkl;'zxcvbnm,./";
@@ -11,7 +11,7 @@ const Cover = () => {
 
 
     useEffect(() => {
-        const blur = document.querySelector('.coversd')
+        const blur: HTMLElement | null = document.querySelector('.coversd')
         let iteration = 0;
         clearInterval(interval);
 
@@ -34,17 +34,21 @@ const Cover = () => {
 
 
 
-        const scrollani =()=>{
+        const scrollani = () => {
             const y = window.scrollY
-            blur.style.setProperty('filter', `blur(${y*0.01}px)`);
-            blur.style.setProperty('transform', `translateY(${-y}px)`);
-            console.log(y)
+            if (blur) {
+
+                blur.style.setProperty('filter', `blur(${y * 0.01}px)`);
+                blur.style.setProperty('transform', `translateY(${-y}px)`);
+                console.log(y)
+            }
+
         }
 
 
         document.addEventListener('scroll', scrollani)
 
-        return ()=> document.removeEventListener('scroll', scrollani)
+        return () => document.removeEventListener('scroll', scrollani)
     }, []);
 
 
@@ -81,11 +85,11 @@ const Cover = () => {
                     <rect width="25" height="25" fill="#ff8c17" />
                 </svg>
                 <svg className="md:block hidden absolute left-sqr-1 top-sqr-2 " width="9" height="151" viewBox="0 0 9 151" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="5" height="151" fill="white"/>
+                    <rect width="5" height="151" fill="white" />
                 </svg>
 
             </div>
-            
+
         </div>
 
     )
