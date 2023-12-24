@@ -37,7 +37,7 @@ const Unite = () => {
                                 </div>
                             </a>
                         </div>
-                        <div className="flex md:justify-end justify-center">
+                        <div className="flex md:justify-end justify-center hover:bg-amber-600">
                             <svg height="5" viewBox="0 0 552 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="123" height="8" fill="#A7271A" />
                                 <rect x="429" width="123" height="8" fill="#FFD600" />
