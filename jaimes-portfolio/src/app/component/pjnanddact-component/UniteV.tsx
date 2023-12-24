@@ -27,7 +27,7 @@ const Unite = () => {
                             <h1 className="text-4xl font-bold text-center md:text-start text-yellow-500 md:text-A7271A">Unite V - Detective City</h1>
                             <h4 className="text-2xl text-center md:text-start">Artwork</h4>
                         </div>
-                        <p className="text-xl ">I’ve Art Leader Position in Unite 5th.
+                        <p className="text-xl ">I’ve been Art Leader Position in Unite 5th.
                             Design Mood board, CI
                             and Another Artworks</p>
                         <div className=" w-auto h-auto flex gap-4 md:justify-end justify-center">
