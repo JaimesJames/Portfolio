@@ -2,6 +2,7 @@ import Coral from "./pjnanddact-component/coralCojaiKiosk"
 import Domfinding from "./pjnanddact-component/KMITLwithDomitaryFinding"
 import Itcamp from "./pjnanddact-component/ITCamp19"
 import Unite from "./pjnanddact-component/UniteV"
+import TheRangerNext from "./pjnanddact-component/TheRangerNext"
 
 
 const ProjectandActivite = () => {
@@ -32,6 +33,7 @@ const ProjectandActivite = () => {
                     <Domfinding />
                     <Itcamp />
                     <Unite />
+                    <TheRangerNext/>
                 </div>
 
             </div>

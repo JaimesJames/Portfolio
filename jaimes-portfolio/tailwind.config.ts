@@ -29,8 +29,11 @@ const config: Config = {
         '674188': '#674188',
         '57AE00': '#57AE00',
         'FF0087': '#FF0087',
-        '121212':'#121212',
-        'A7271A': '#A7271A'
+        '121212': '#121212',
+        'A7271A': '#A7271A',
+        'FF4161': '#FF4161',
+        'B0D242': '#B0D242',
+        'FFE55B': '#FFE55B'
       },
       rotate:{
         '225': '225deg'
@@ -50,6 +53,10 @@ const config: Config = {
         'bq':['LibreBarcode39-Regular'],
         'lf':['Linefont-VariableFont']
       },
+      backgroundImage: {
+        'ranger': "url('img/ranger3.png')",
+       
+      }
     },
     
   },
