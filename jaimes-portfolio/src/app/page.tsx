@@ -64,7 +64,7 @@ export default function Home() {
   const inititem: Item[] = [
     { id: 1, spot: 'About Me', fill: `${title === 'About' ? '#f59e0b' : 'none'}` },
     { id: 2, spot: 'Projects & Activities', fill: `${title === 'Projects & Activities' ? '#f59e0b' : 'none'}` },
-    // { id: 3, spot: 'Artwork', fill: `${title === 'Artwork' ? '#f59e0b' : 'none'}` },
+    { id: 3, spot: 'Artwork', fill: `${title === 'Artwork' ? '#f59e0b' : 'none'}` },
   ];
 
   const about: Abouts[] = [
@@ -138,6 +138,7 @@ export default function Home() {
         </div> 
         <Models/>
       <div className='container'>
+        <Artwork/>
        
       </div>
       <Footer/>
