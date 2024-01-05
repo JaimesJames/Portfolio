@@ -131,19 +131,19 @@ const Models: React.FC = () => {
     return (
         <>
             <div className='w-full h-auto p-5 bg-amber-500 mt-32'>
-                <div className="container md:h-500 w-full flex md:flex-row flex-col  content-center justify-center gap-5 md:bg-amber-500 rounded-2xl md:text-ci-1 text-white ">
-                    <div className='md:h-full h-500 md:w-2/3  bg-amber-300 rounded-2xl  backdrop-filter backdrop-blur-2xl bg-opacity-20 shadow-lg shadow-amber-600 overflow-hidden'>
+                <div className="container lg:h-500 w-full flex lg:flex-row flex-col  content-center justify-center gap-5 md:bg-amber-500 rounded-2xl md:text-ci-1 text-white ">
+                    <div className='lg:h-full h-500 lg:w-2/3  bg-amber-300 rounded-2xl  backdrop-filter backdrop-blur-2xl bg-opacity-20 shadow-lg shadow-amber-600 overflow-hidden'>
                         <div className="w-full h-full flex justify-center content-center ">
-                            <iframe width={2000}  allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b41f3c582c004b218f7cb7154b2151e3/embed"></iframe>
+                            <iframe className='w-full h-auto' width={0}  allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b41f3c582c004b218f7cb7154b2151e3/embed"></iframe>
                         </div>
                     </div>
-                    <div className='h-full md:w-1/3 flex flex-col gap-6 content-center justify-center'>
+                    <div className='h-full lg:w-1/3 flex flex-col gap-6 content-center justify-center'>
                         {/* <div className='w-full px-5 py-10 bg-stone-800 rounded-2xl  backdrop-filter backdrop-blur-2xl  shadow-lg shadow-amber-600'> */}
 
                         {/* </div> */}
                         <p className='p-3'>I have used Maya and Blender for Modeling work. <br /> I actually interest in Technical Artist and Pipeline position Anyway I can work in either, Modeling Rigging Animation ETC.</p>
                         <p className='p-3'>You can see my another 3D working and Artwork in here!</p>
-                        <div className="p-3 w-auto h-auto flex md:flex-row justify-center md:justify-start gap-4">
+                        <div className="p-3 w-auto h-auto flex md:flex-row justify-center lg:justify-start gap-4">
                             <a href="https://www.artstation.com/jaimesjames">
                                 <div className="w-14 h-14 md:bg-ci-1 bg-amber-500 rounded-full  flex justify-center content-center p-4 hover:bg-amber-800">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" viewBox="0 0 512 512"><path fill="#ffffff" d="M2 377.4l43 74.3A51.4 51.4 0 0 0 90.9 480h285.4l-59.2-102.6zM501.8 350L335.6 59.3A51.4 51.4 0 0 0 290.2 32h-88.4l257.3 447.6 40.7-70.5c1.9-3.2 21-29.7 2-59.1zM275 304.5l-115.5-200L44 304.5z" /></svg>

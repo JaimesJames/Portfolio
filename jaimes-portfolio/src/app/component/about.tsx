@@ -18,8 +18,8 @@ const About = (props: AboutData) => {
                 <div className="mt-10">
                     <h1 className="text-4xl text-center">About Me</h1>
                 </div>
-                <div className="p-4 h-auto w-full flex md:flex-row flex-col gap-20  md:text-start content-center justify-center relative">
-                    <div className="md:w-10/12 pt-10 h-full">
+                <div className="p-4 h-auto w-full flex lg:flex-row flex-col gap-20  md:text-start content-center justify-center relative">
+                    <div className="lg:w-10/12 pt-10 h-full">
                         <div className="flex gap-10 content-center justify-center">
                            <div className="bg-amber-500 w-2 h-200"/>
                             <p className="text-lg">
@@ -33,7 +33,7 @@ const About = (props: AboutData) => {
                             </svg>
                             <div className="text-xl text-">king mongkut's institute of technology ladkrabang</div>
                         </div>
-                        <div className=" w-auto h-auto flex md:flex-row justify-center md:justify-start gap-4 mt-20">
+                        <div className=" w-auto h-auto flex md:flex-row justify-center lg:justify-start gap-4 mt-20">
                             <a href="https://www.linkedin.com/in/supanatkaewkulsri/">
                                 <div className="w-14 h-14 bg-amber-500 rounded-full  flex justify-center content-center p-4 hover:bg-amber-600 ">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="25" width="23" viewBox="0 0 448 512"><path fill="#2b2b2b" d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" /></svg>

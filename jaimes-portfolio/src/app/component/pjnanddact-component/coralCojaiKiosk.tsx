@@ -5,7 +5,7 @@ import mock from '@/app/img/coral.png'
 const Coral = () => {
     return (
         <>
-            <div className=" p-4 w-full md:h-500 flex flex-col content-center justify-center relative z-10 md:bg-white text-white md:text-ci-1 rounded-2xl">
+            <div className=" p-4 w-full lg:h-500 flex flex-col content-center justify-center relative z-10 md:bg-white text-white md:text-ci-1 rounded-2xl">
                 <div className="md:block hidden">
                     <svg className="absolute left-sqr-1 top-sqr-1" width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="25" height="25" fill="#2B2B2B" />
@@ -20,15 +20,15 @@ const Coral = () => {
                         <rect width="25" height="25" fill="#2B2B2B" />
                     </svg>
                 </div>
-                <div className="md:p-20 p-5 flex md:flex-row flex-col-reverse justify-between content-center text-left">
-                    <div className="flex flex-col gap-5 content-center justify-center md:p-14">
+                <div className="md:p-20 p-5 flex lg:flex-row flex-col-reverse justify-between content-center text-left">
+                    <div className="flex flex-col gap-5 content-center justify-center xl:p-14 xl:w-full w-11/12">
                         <div>
-                            <h1 className="text-4xl font-bold text-center md:text-start text-68B8B9">Coral Corjai Kiosk</h1>
-                            <h4 className="text-2xl text-center md:text-start">Co-Architecture Project</h4>
+                            <h1 className="text-4xl font-bold text-center lg:text-start text-68B8B9">Coral Corjai Kiosk</h1>
+                            <h4 className="text-2xl text-center lg:text-start">Co-Architecture Project</h4>
                         </div>
-                        <p className="text-md ">Coral Corjai is a project from the Multimedia Programming course, where we collaborated with the School of Architecture, Art, and Design. They were responsible for web design, and then the IT team brought the website to life</p>
-                        <p className="text-md ">Our project addresses the care of Thailand's seas, using a kiosk format for museum displays. This design ensures the website is best viewed on iPads.</p>
-                        <div className=" w-auto h-auto flex gap-4 md:justify-start justify-center">
+                        <p className="text-md">Coral Corjai is a project from the Multimedia Programming course, where we collaborated with the School of Architecture, Art, and Design. They were responsible for web design, and then the IT team brought the website to life</p>
+                        <p className="text-md">Our project addresses the care of Thailand's seas, using a kiosk format for museum displays. This design ensures the website is best viewed on iPads.</p>
+                        <div className="h-auto flex gap-4 lg:justify-start justify-center">
                             <a href="https://github.com/professorkong/SDG">
                                 <div className="w-14 h-14 bg-D8DDB6 rounded-full flex justify-center content-center p-2 hover:bg-amber-600">
 
@@ -49,7 +49,7 @@ const Coral = () => {
 
                     </div>
                     <div>
-                        <Image src={mock} width={2000} height={100} alt='coral' />
+                        <Image src={mock} width={0} height={0} alt='coral' />
                     </div>
                 </div>
             </div>

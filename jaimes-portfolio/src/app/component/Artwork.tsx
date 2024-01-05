@@ -43,7 +43,7 @@ const Artwork = () => {
                 {/* <h2 className="text-white text-3xl font-bold text-center mb-10">Digital Art</h2> */}
             
 
-                <div className="grid md:grid-cols-4 grid-cols-2 gap-10 aspect-square p-20">
+                <div className="grid md:grid-cols-4 grid-cols-2 gap-10 aspect-square md:p-20 p-10">
                     <div className='flex flex-col gap-10'>
                         <Image src='/artwork/1.jpg' width="0" height="0" sizes="100vw" className="w-auto h-auto rounded-lg shadow-lg shadow-stone-800" alt="IG1" />
                         <Image src='/artwork/2.png' width="0" height="0" sizes="100vw" className="w-auto h-auto rounded-lg shadow-lg shadow-stone-800" alt="IG2" />

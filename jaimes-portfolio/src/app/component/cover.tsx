@@ -57,7 +57,7 @@ const Cover = () => {
         <div className="coversd p-4 h-screen w-full flex flex-col content-center justify-center relative z-50 ">
             <div className=" z-20 flex flex-col justify-between gap-y-9 drop-shadow">
                 <h3 className="text-center text-3xl text-white font-thab">Hi, This is</h3>
-                <h1 className="text-center md:text-8xl text-4xl font-thab text-white"><span className="font-mono text-amber-500">{showTitle}</span>'s</h1>
+                <h1 className="text-center lg:text-8xl text-4xl font-thab text-white"><span className="font-mono text-amber-500">{showTitle}</span>'s</h1>
                 <h3 className="text-center text-3xl text-white font-thab">Portfolio</h3>
             </div>
 
